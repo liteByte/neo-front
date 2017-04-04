@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
+import injectTapEventPlugin from "react-tap-event-plugin";
+import React, {Component} from "react";
+import theme from "./components/theme";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import getMuiTheme from "material-ui/styles/getMuiTheme";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header/>
-        <Main/>
-        <Footer/>
-      </div>
+      <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
+        <div>
+          <Header/>
+          <Main/>
+          <Footer/>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
