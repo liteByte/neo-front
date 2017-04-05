@@ -1,9 +1,24 @@
-import React, { Component } from 'react';
+import React, {Component} from "react";
+
+const sectionStyle = {
+  width: '50%',
+  float: 'left',
+  height: '100%',
+};
+
+const titleStyle = {
+  margin: 0,
+  fontSize: '1.25em',
+  fontWeight: 'normal',
+  marginTop: 12,
+};
 
 export default class EarthSection extends Component {
   render() {
     return (
-      <div/>
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Earth</h2>
+      </section>
     );
   }
 }
