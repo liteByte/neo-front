@@ -43,7 +43,7 @@ export default class Header extends Component {
     return (
       <header style={headerStyle}>
         <div style={divLeftStyle}>
-          <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
+          <a href="/"><img alt="logo" src="assets/header_logo.svg" style={imgStyle}/></a>
         </div>
         <div style={divRightStyle}>
           <div style={buttonContainerStyle}>
