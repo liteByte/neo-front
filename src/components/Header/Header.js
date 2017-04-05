@@ -22,8 +22,14 @@ const divRightStyle = {
   textAlign: "right"
 };
 
+const imgStyle = {
+  height: "100%",
+  marginLeft: 25
+};
+
 const buttonContainerStyle = {
   height: "100%",
+  marginRight: 25,
   display: "inline-block"
 };
 
@@ -37,7 +43,7 @@ export default class Header extends Component {
     return (
       <header style={headerStyle}>
         <div style={divLeftStyle}>
-          <img alt="logo"/>
+          <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
           <div style={buttonContainerStyle}>
