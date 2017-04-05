@@ -1,11 +1,10 @@
 import React, {Component} from "react";
 import FlatButton from "material-ui/FlatButton";
-import {grey900} from "material-ui/styles/colors";
 
 const headerStyle = {
   width: "100%",
   height: 50,
-  background: grey900
+  background: '#0a0a0a'
 };
 
 const divLeftStyle = {

@@ -1,10 +1,9 @@
 import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
-import {grey900} from "material-ui/styles/colors";
 
 const palette = {
   ...darkBaseTheme.palette,
-  primary1Color: grey900,
-  primary2Color: grey900,
+  primary1Color: '#0a0a0a',
+  primary2Color: '#0a0a0a',
 };
 
 export default {
