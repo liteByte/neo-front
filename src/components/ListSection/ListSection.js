@@ -1,26 +1,24 @@
 import React, {Component} from "react";
-import IconButton from "material-ui/IconButton";
-import IconInfo from "material-ui/svg-icons/action/info-outline";
+import InfoButton from "../InfoButton";
+
+const sectionStyle = {
+  width: '50%',
+  float: 'left',
+  height: '100%',
+};
 
 const titleStyle = {
+  margin: 0,
   fontSize: '1.25em',
-  fontWeight: 'normal'
+  fontWeight: 'normal',
 };
-
-const iconInfoStyle = {
-  top: 5,
-  left: 5,
-  position: 'relative',
-  cursor: 'help'
-};
-
 
 export default class ListSection extends Component {
   render() {
     return (
-      <div>
-        <h2 style={titleStyle}>Near Earth Objects<IconButton style={iconInfoStyle}><IconInfo/></IconButton></h2>
-      </div>
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
+      </section>
     );
   }
 }
