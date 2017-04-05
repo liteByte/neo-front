@@ -46,8 +46,16 @@ export default class Header extends Component {
         </div>
         <div style={divRightStyle}>
           <div style={buttonContainerStyle}>
-            <div style={buttonStyle}><a href="http://litebyte.us/#contact"><FlatButton label="About Us" style={{height: "100%"}}/></a></div>
-            <div style={buttonStyle}><a href="https://github.com/liteByte/neo-front"><FlatButton label="Repository" style={{height: "100%"}}/></a></div>
+            <div style={buttonStyle}>
+              <a href="http://litebyte.us/#contact" target="_blank">
+                <FlatButton label="About Us" style={{height: "100%"}}/>
+              </a>
+            </div>
+            <div style={buttonStyle}>
+              <a href="https://github.com/liteByte/neo-front" target="_blank">
+                <FlatButton label="Repository" style={{height: "100%"}}/>
+              </a>
+            </div>
           </div>
         </div>
       </header>
