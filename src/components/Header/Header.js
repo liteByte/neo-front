@@ -5,7 +5,6 @@ import {grey900} from "material-ui/styles/colors";
 const headerStyle = {
   width: "100%",
   height: 50,
-  display: "inline-block",
   background: grey900
 };
 
@@ -18,19 +17,20 @@ const divLeftStyle = {
 const divRightStyle = {
   width: "50%",
   height: "100%",
-  float: "left",
-  textAlign: "right"
+  float: "left"
 };
 
 const imgStyle = {
   height: "100%",
-  marginLeft: 25
+  marginLeft: 25,
+  cursor: "pointer",
+  verticalAlign: "top"
 };
 
 const buttonContainerStyle = {
   height: "100%",
   marginRight: 25,
-  display: "inline-block"
+  float: "right"
 };
 
 const buttonStyle = {
@@ -43,7 +43,7 @@ export default class Header extends Component {
     return (
       <header style={headerStyle}>
         <div style={divLeftStyle}>
-          <a href="/"><img alt="logo" src="assets/header_logo.svg" style={imgStyle}/></a>
+          <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
           <div style={buttonContainerStyle}>

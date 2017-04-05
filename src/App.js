@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
-        <div>
+        <div style={{height: "100vh"}}>
           <Header/>
           <Main/>
           <Footer/>
