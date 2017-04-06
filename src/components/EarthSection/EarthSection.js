@@ -7,10 +7,9 @@ const sectionStyle = {
 };
 
 const titleStyle = {
-  margin: 0,
+  margin: '12px 0 25px 0',
   fontSize: '1.25em',
   fontWeight: 'normal',
-  marginTop: 12,
 };
 
 export default class EarthSection extends Component {

@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import InfoButton from "../InfoButton";
 import {GridList, GridTile} from 'material-ui/GridList';
 
+const cellSize = 100;
+
 const sectionStyle = {
   width: '50%',
   float: 'left',
@@ -9,7 +11,7 @@ const sectionStyle = {
 };
 
 const titleStyle = {
-  margin: 0,
+  margin: '0 0 25px 0',
   fontSize: '1.25em',
   fontWeight: 'normal',
 };
@@ -27,29 +29,40 @@ const styles = {
   },
 };
 
+const tileStyle = {
+  width: cellSize,
+  padding: 10,
+  boxSizing: 'border-box',
+};
+
+const imgStyle = {
+  width: "100%",
+  height: "100%",
+};
+
 export default class ListSection extends Component {
 
   neos = [
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
     {
-      img: 'assets/header_logo.svg'
+      img: 'assets/tierra_nubes.svg'
     },
   ];
 
@@ -58,11 +71,12 @@ export default class ListSection extends Component {
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
         <div style={styles.root}>
-          <GridList cellHeight={50} cols={0} style={styles.gridList}
-          >
+          <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
             {this.neos.map((neo, index) => (
               <GridTile key={index}>
-                <img src={neo.img} alt="Neo"/>
+                <div style={tileStyle}>
+                  <img src={neo.img} alt="Neo" style={imgStyle}/>
+                </div>
               </GridTile>
             ))}
           </GridList>
