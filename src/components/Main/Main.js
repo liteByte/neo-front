@@ -6,8 +6,8 @@ import EarthSection from "../EarthSection/EarthSection";
 import EarthSectionResponsive from "../EarthSection/EarthSectionResponsive";
 
 const style = {
-  height: 'calc(100% - 100px)',
-  padding: 25,
+  height: '100%',
+  padding: '75px 25px',
   boxSizing: 'border-box',
   overflow: 'auto',
   color: '#fff'

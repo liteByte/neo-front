@@ -8,45 +8,48 @@ import Popover from "../Popover";
 
 
 const headerStyle = {
-  width: "100%",
+  width: '100%',
   height: 50,
-  background: '#0a0a0a'
+  position: 'fixed',
+  top: 0,
+  zIndex: 1400,
+  background: '#0a0a0a',
 };
 
 const divLeftStyle = {
-  width: "50%",
-  height: "100%",
-  float: "left"
+  width: '50%',
+  height: '100%',
+  float: 'left',
 };
 
 const divRightStyle = {
-  width: "50%",
-  height: "100%",
-  float: "left"
+  width: '50%',
+  height: '100%',
+  float: 'left',
 };
 
 const imgStyle = {
-  height: "100%",
+  height: '100%',
   marginLeft: 25,
-  cursor: "pointer",
-  verticalAlign: "top"
+  cursor: 'pointer',
+  verticalAlign: 'top',
 };
 
 const buttonContainerStyle = {
-  height: "100%",
+  height: '100%',
   marginRight: 25,
-  float: "right"
+  float: 'right'
 };
 
 const buttonStyle = {
-  height: "100%",
-  float: "left"
+  height: '100%',
+  float: 'left',
 };
 
 const menuButtonStyle = {
-  height: "100%",
+  height: '100%',
   marginRight: 5,
-  float: "right"
+  float: 'right',
 };
 
 export default class Header extends Component {

@@ -1,15 +1,18 @@
 import React, {Component} from "react";
 
 const footerStyle = {
-  width: "100%",
+  width: '100%',
   height: 50,
   padding: 17,
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
+  position: 'fixed',
+  bottom: 0,
+  zIndex: '1400',
   background: '#0a0a0a',
-  color: "#fff",
-  fontSize: ".80em",
+  color: '#fff',
+  fontSize: '.80em',
   fontWeight: 100,
-  textAlign: "center",
+  textAlign: 'center',
 };
 
 export default class Footer extends Component {

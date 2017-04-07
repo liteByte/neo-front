@@ -10,7 +10,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    padding: 10
+    padding: '60px 10px'
   },
   gridList: {
     width: '100%',
