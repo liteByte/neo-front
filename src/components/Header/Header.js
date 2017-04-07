@@ -51,7 +51,7 @@ export default class Header extends Component {
           <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
-          <MediaQuery minWidth={500} style={buttonContainerStyle}>
+          <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
             <div style={buttonStyle}>
               <a href="http://litebyte.us/#contact" target="_blank">
                 <FlatButton label="About Us" style={{height: "100%"}}/>
@@ -63,7 +63,7 @@ export default class Header extends Component {
               </a>
             </div>
           </MediaQuery>
-          <MediaQuery maxWidth={500} style={buttonContainerStyle}>
+          <MediaQuery maxWidth={600} component="div" style={buttonContainerStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
               <a href="http://litebyte.us/#contact" target="_blank">
                 <MenuItem primaryText="About Us"/>
