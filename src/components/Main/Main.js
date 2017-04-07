@@ -3,6 +3,7 @@ import MediaQuery from "react-responsive";
 import ListSection from "../ListSection/ListSection";
 import ListSectionResponsive from "../ListSection/ListSectionResponsive";
 import EarthSection from "../EarthSection/EarthSection";
+import EarthSectionResponsive from "../EarthSection/EarthSectionResponsive";
 
 const style = {
   height: 'calc(100% - 100px)',
@@ -13,17 +14,39 @@ const style = {
 };
 
 export default class Main extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      drawer: false,
+    }
+  }
+
+  setDrawerOpen = (open) => {
+    this.setState({
+      drawer: open,
+    })
+  };
+
   render() {
     return (
       <main style={style}>
-        <MediaQuery minDeviceWidth={500}>
+        <MediaQuery minWidth={500}>
           {matches => {
-            if (matches) return <ListSection/>;
-            else return <ListSectionResponsive/>;
+            return matches ?
+              <ListSection/>
+              :
+              <ListSectionResponsive open={this.state.drawer} setOpen={this.setDrawerOpen}/>
           }}
         </MediaQuery>
-        <MediaQuery minDeviceWidth={500}>
-          {matches => <EarthSection responsive={matches}/>}
+        <MediaQuery minWidth={500}>
+          {matches => {
+            return matches ?
+              <EarthSection/>
+              :
+              <EarthSectionResponsive setOpen={this.setDrawerOpen}/>
+          }}
         </MediaQuery>
       </main>
     );

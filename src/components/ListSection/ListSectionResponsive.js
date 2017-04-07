@@ -1,27 +1,16 @@
 import React, {Component} from "react";
-import InfoButton from "../InfoButton";
+import Drawer from "material-ui/Drawer";
 import {GridList, GridTile} from "material-ui/GridList";
 import Neo from "./Neo";
 
 const cellSize = 100;
-
-const sectionStyle = {
-  width: '50%',
-  float: 'left',
-  height: '100%',
-};
-
-const titleStyle = {
-  margin: '0 0 25px 0',
-  fontSize: '1.25em',
-  fontWeight: 'normal',
-};
 
 const styles = {
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
+    padding: 10
   },
   gridList: {
     width: '100%',
@@ -30,7 +19,11 @@ const styles = {
   },
 };
 
-export default class ListSection extends Component {
+const overlayStyle = {
+  backgroundColor: "rgba(0, 0, 0, .15)"
+};
+
+export default class ListSectionResponsive extends Component {
 
   neos = [
     {
@@ -58,8 +51,13 @@ export default class ListSection extends Component {
 
   render() {
     return (
-      <section style={sectionStyle}>
-        <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
+      <Drawer
+        open={this.props.open}
+        docked={false}
+        width={120}
+        onRequestChange={open => this.props.setOpen(open)}
+        overlayStyle={overlayStyle}
+      >
         <div style={styles.root}>
           <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
             {this.neos.map((neo, index) => (
@@ -69,7 +67,12 @@ export default class ListSection extends Component {
             ))}
           </GridList>
         </div>
-      </section>
+      </Drawer>
     );
   }
 }
+
+ListSectionResponsive.propTypes = {
+  open: React.PropTypes.bool.isRequired,
+  setOpen: React.PropTypes.func.isRequired,
+};

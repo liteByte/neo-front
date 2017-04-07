@@ -21,3 +21,5 @@ export default class EarthSection extends Component {
     );
   }
 }
+
+EarthSection.propTypes = {};
