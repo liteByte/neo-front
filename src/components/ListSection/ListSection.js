@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import InfoButton from "../InfoButton";
-import {GridList, GridTile} from 'material-ui/GridList';
+import {GridList, GridTile} from "material-ui/GridList";
+import Neo from "./Neo";
 
 const cellSize = 100;
 
@@ -23,21 +24,10 @@ const styles = {
     justifyContent: 'space-around',
   },
   gridList: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
     overflowY: 'auto',
   },
-};
-
-const tileStyle = {
-  width: cellSize,
-  padding: 10,
-  boxSizing: 'border-box',
-};
-
-const imgStyle = {
-  width: "100%",
-  height: "100%",
 };
 
 export default class ListSection extends Component {
@@ -74,9 +64,7 @@ export default class ListSection extends Component {
           <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
             {this.neos.map((neo, index) => (
               <GridTile key={index}>
-                <div style={tileStyle}>
-                  <img src={neo.img} alt="Neo" style={imgStyle}/>
-                </div>
+                <Neo img={neo.img} cellSize={cellSize}/>
               </GridTile>
             ))}
           </GridList>
