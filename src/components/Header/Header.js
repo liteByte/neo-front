@@ -1,5 +1,11 @@
 import React, {Component} from "react";
+import MediaQuery from "react-responsive";
 import FlatButton from "material-ui/FlatButton";
+import MenuItem from "material-ui/MenuItem";
+import IconMoreVert from "material-ui/svg-icons/navigation/more-vert";
+import IconButton from "material-ui/IconButton";
+import Popover from "../Popover";
+
 
 const headerStyle = {
   width: "100%",
@@ -45,7 +51,7 @@ export default class Header extends Component {
           <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
-          <div style={buttonContainerStyle}>
+          <MediaQuery minWidth={500} style={buttonContainerStyle}>
             <div style={buttonStyle}>
               <a href="http://litebyte.us/#contact" target="_blank">
                 <FlatButton label="About Us" style={{height: "100%"}}/>
@@ -56,7 +62,17 @@ export default class Header extends Component {
                 <FlatButton label="Repository" style={{height: "100%"}}/>
               </a>
             </div>
-          </div>
+          </MediaQuery>
+          <MediaQuery maxWidth={500} style={buttonContainerStyle}>
+            <Popover component={<IconButton><IconMoreVert/></IconButton>}>
+              <a href="http://litebyte.us/#contact" target="_blank">
+                <MenuItem primaryText="About Us"/>
+              </a>
+              <a href="https://github.com/liteByte/neo-front" target="_blank">
+                <MenuItem primaryText="Repository"/>
+              </a>
+            </Popover>
+          </MediaQuery>
         </div>
       </header>
     );
