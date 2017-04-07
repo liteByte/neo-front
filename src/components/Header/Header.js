@@ -52,6 +52,10 @@ const menuButtonStyle = {
   float: 'right',
 };
 
+const aStyle = {
+  textDecoration: 'none'
+};
+
 export default class Header extends Component {
   render() {
     return (
@@ -74,10 +78,10 @@ export default class Header extends Component {
           </MediaQuery>
           <MediaQuery maxWidth={600} component="div" style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
-              <a href="http://litebyte.us/#contact" target="_blank">
+              <a href="http://litebyte.us/#contact" target="_blank" style={aStyle}>
                 <MenuItem primaryText="About Us"/>
               </a>
-              <a href="https://github.com/liteByte/neo-front" target="_blank">
+              <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
             </Popover>
