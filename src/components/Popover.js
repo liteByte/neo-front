@@ -43,7 +43,8 @@ export default class Popover extends React.Component {
           key: index,
           onClick: () => {
             this.handleRequestClose();
-            item.props.onClick();
+            if (typeof item.props.onClick === 'function')
+              item.props.onClick();
           }
         }
       );
