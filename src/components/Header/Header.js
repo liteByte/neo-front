@@ -43,6 +43,12 @@ const buttonStyle = {
   float: "left"
 };
 
+const menuButtonStyle = {
+  height: "100%",
+  marginRight: 5,
+  float: "right"
+};
+
 export default class Header extends Component {
   render() {
     return (
@@ -63,7 +69,7 @@ export default class Header extends Component {
               </a>
             </div>
           </MediaQuery>
-          <MediaQuery maxWidth={600} component="div" style={buttonContainerStyle}>
+          <MediaQuery maxWidth={600} component="div" style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
               <a href="http://litebyte.us/#contact" target="_blank">
                 <MenuItem primaryText="About Us"/>
