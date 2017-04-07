@@ -7,7 +7,7 @@ const sectionStyle = {
 };
 
 const titleStyle = {
-  margin: '12px 0 25px 0',
+  margin: '10px 0 25px 0',
   fontSize: '1.25em',
   fontWeight: 'normal',
 };
