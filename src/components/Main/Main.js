@@ -18,11 +18,11 @@ export default class Main extends Component {
   neos = [
     {
       color: 2,
-      terrain: 1,
+      terrain: 4,
     },
     {
       color: 0,
-      terrain: 1,
+      terrain: 5,
     },
     {
       color: 1,
@@ -34,15 +34,15 @@ export default class Main extends Component {
     },
     {
       color: 0,
-      terrain: 1,
+      terrain: 0,
     },
     {
       color: 3,
-      terrain: 1,
+      terrain: 2,
     },
     {
       color: 1,
-      terrain: 1,
+      terrain: 4,
     }
   ];
 
