@@ -24,31 +24,6 @@ const overlayStyle = {
 };
 
 export default class ListSectionResponsive extends Component {
-
-  neos = [
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-  ];
-
   render() {
     return (
       <Drawer
@@ -60,9 +35,9 @@ export default class ListSectionResponsive extends Component {
       >
         <div style={styles.root}>
           <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
-            {this.neos.map((neo, index) => (
+            {this.props.neos.map((neo, index) => (
               <GridTile key={index}>
-                <Neo img={neo.img} cellSize={cellSize}/>
+                <Neo color={neo.color} terrain={neo.terrain} cellSize={cellSize}/>
               </GridTile>
             ))}
           </GridList>
@@ -73,6 +48,7 @@ export default class ListSectionResponsive extends Component {
 }
 
 ListSectionResponsive.propTypes = {
+  neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   open: React.PropTypes.bool.isRequired,
   setOpen: React.PropTypes.func.isRequired,
 };

@@ -15,6 +15,37 @@ const style = {
 
 export default class Main extends Component {
 
+  neos = [
+    {
+      color: 2,
+      terrain: 1,
+    },
+    {
+      color: 0,
+      terrain: 1,
+    },
+    {
+      color: 1,
+      terrain: 1,
+    },
+    {
+      color: 3,
+      terrain: 1,
+    },
+    {
+      color: 0,
+      terrain: 1,
+    },
+    {
+      color: 3,
+      terrain: 1,
+    },
+    {
+      color: 1,
+      terrain: 1,
+    }
+  ];
+
   constructor(props) {
     super(props);
 
@@ -35,9 +66,9 @@ export default class Main extends Component {
         <MediaQuery minWidth={500}>
           {matches => {
             return matches ?
-              <ListSection/>
+              <ListSection neos={this.neos}/>
               :
-              <ListSectionResponsive open={this.state.drawer} setOpen={this.setDrawerOpen}/>
+              <ListSectionResponsive neos={this.neos} open={this.state.drawer} setOpen={this.setDrawerOpen}/>
           }}
         </MediaQuery>
         <MediaQuery minWidth={500}>

@@ -31,40 +31,15 @@ const styles = {
 };
 
 export default class ListSection extends Component {
-
-  neos = [
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-    {
-      img: 'assets/tierra_nubes.svg'
-    },
-  ];
-
   render() {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
         <div style={styles.root}>
           <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
-            {this.neos.map((neo, index) => (
+            {this.props.neos.map((neo, index) => (
               <GridTile key={index}>
-                <Neo img={neo.img} cellSize={cellSize}/>
+                <Neo color={neo.color} terrain={neo.terrain} cellSize={cellSize}/>
               </GridTile>
             ))}
           </GridList>
@@ -73,3 +48,7 @@ export default class ListSection extends Component {
     );
   }
 }
+
+ListSection.propTypes = {
+  neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+};
