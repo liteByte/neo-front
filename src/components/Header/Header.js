@@ -5,6 +5,7 @@ import MenuItem from "material-ui/MenuItem";
 import IconMoreVert from "material-ui/svg-icons/navigation/more-vert";
 import IconButton from "material-ui/IconButton";
 import Popover from "../Popover";
+import AboutUs from "../AboutUs/AboutUs";
 
 
 const headerStyle = {
@@ -57,18 +58,32 @@ const aStyle = {
 };
 
 export default class Header extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      aboutUs: true
+    };
+  }
+
+  setAboutOpen = (open) => {
+    this.setState({
+      aboutUs: open
+    });
+  };
+
   render() {
     return (
       <header style={headerStyle}>
+        <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
         <div style={divLeftStyle}>
           <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
           <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
             <div style={buttonStyle}>
-              <a href="http://litebyte.us/#contact" target="_blank">
-                <FlatButton label="About Us" style={{height: "100%"}}/>
-              </a>
+              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.setAboutOpen(true)}/>
             </div>
             <div style={buttonStyle}>
               <a href="https://github.com/liteByte/neo-front" target="_blank">
@@ -78,9 +93,7 @@ export default class Header extends Component {
           </MediaQuery>
           <MediaQuery maxWidth={600} component="div" style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
-              <a href="http://litebyte.us/#contact" target="_blank" style={aStyle}>
-                <MenuItem primaryText="About Us"/>
-              </a>
+              <MenuItem primaryText="About Us" onClick={() => this.setAboutOpen(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
