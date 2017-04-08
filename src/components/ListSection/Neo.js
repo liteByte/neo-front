@@ -1,8 +1,22 @@
 import React, {Component} from "react";
+import IconButton from "material-ui/IconButton";
+import SvgIcon from "material-ui/SvgIcon";
 
 const tileStyle = {
-  padding: 10,
+  height: '100%',
+  padding: 1,
   boxSizing: 'border-box',
+};
+
+const buttonStyle = {
+  width: '100%',
+  height: '100%',
+  padding: 8,
+};
+
+const iconStyle = {
+  width: '100%',
+  height: '100%',
 };
 
 export default class Neo extends Component {
@@ -119,14 +133,21 @@ export default class Neo extends Component {
   render() {
     return (
       <article style={this.getArticleStyle()}>
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px" y="0px"
-          viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-          {this.getBase(this.getColor(this.props.color))}
-          {this.getTerrain(this.props.terrain)}
-        </svg>
+        <IconButton
+          style={buttonStyle}
+          iconStyle={iconStyle}
+        >
+          <SvgIcon>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px" y="0px"
+              viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
+              {this.getBase(this.getColor(this.props.color))}
+              {this.getTerrain(this.props.terrain)}
+            </svg>
+          </SvgIcon>
+        </IconButton>
       </article>
     );
   }
