@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"  xmlns:i="&ns_ai;"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="200px" height="200px"
+	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<circle fill="#006AD2" cx="100" cy="100" r="100"/>
+		<g>
+			<path opacity="0.3" fill="#0B1B26" d="M48.326,52.999c0,7.915,6.417,14,14.334,14h131.972c-3.561-10-8.791-20-15.367-28H62.66
+				C54.743,38.999,48.326,45.082,48.326,52.999z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M132.288,110.499c0-7.917-6.416-14.5-14.333-14.5H0.081c-0.048,1-0.08,2.759-0.08,4.041
+				c0,8.541,1.073,16.959,3.088,24.959h114.866C125.872,124.999,132.288,118.414,132.288,110.499z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M148.66,110.499c0,7.915,6.419,14.5,14.337,14.5h33.914c2.015-8,3.088-16.418,3.088-24.959
+				c0-1.282-0.032-3.041-0.08-4.041h-36.922C155.079,95.999,148.66,102.582,148.66,110.499z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M107.858,167.499c0,7.915,6.416,14.5,14.333,14.5h35.219c10.847-8,20.11-18,27.201-29
+				h-62.42C114.274,152.999,107.858,159.583,107.858,167.499z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M86.028,167.499c0-7.917-6.419-14.5-14.334-14.5H15.388c7.091,11,16.354,21,27.201,29
+				h29.104C79.609,181.999,86.028,175.414,86.028,167.499z"/>
+		</g>
+	</g>
+</switch>
+</svg>

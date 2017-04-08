@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"  xmlns:i="&ns_ai;"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="200px" height="200px"
+	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<circle fill="#006AD2" cx="100" cy="100" r="100"/>
+		<g>
+			<circle opacity="0.3" fill="#0B1B26" cx="56.328" cy="131.382" r="28.619"/>
+			<path opacity="0.3" fill="#0B1B26" d="M37.773,74.128c15.807,0,28.619-12.812,28.619-28.619c0-13.849-9.836-25.398-22.904-28.047
+				c-13.82,9.485-25.139,22.35-32.761,37.406C14.606,66.077,25.248,74.128,37.773,74.128z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M132.646,188.62c0,1.95,0.196,3.853,0.567,5.693c16.994-5.983,31.885-16.426,43.268-29.927
+				c-4.408-2.774-9.623-4.384-15.217-4.384C145.459,160.001,132.646,172.814,132.646,188.62z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M146.835,74.128c17.396,0,32.378-10.3,39.208-25.13
+				C171.147,23.91,145.6,5.893,115.629,1.188c-7.397,7.746-11.948,18.232-11.948,29.788
+				C103.681,54.809,123.003,74.128,146.835,74.128z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M161.264,131.382c7.973,0,14.431-6.462,14.431-14.432s-6.458-14.43-14.431-14.43
+				c-7.967,0-14.43,6.46-14.43,14.43S153.297,131.382,161.264,131.382z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M20.242,87.854c0-7.97-6.461-14.431-14.431-14.431c-0.783,0-1.548,0.08-2.298,0.2
+				C1.228,82.018,0,90.849,0,99.969c0,0.366,0.01,0.729,0.013,1.095c1.775,0.78,3.735,1.221,5.799,1.221
+				C13.781,102.285,20.242,95.824,20.242,87.854z"/>
+			<circle opacity="0.3" fill="#0B1B26" cx="103.806" cy="87.854" r="14.431"/>
+			<circle opacity="0.3" fill="#0B1B26" cx="116.14" cy="145.57" r="14.431"/>
+			<path opacity="0.3" fill="#0B1B26" d="M89.376,188.863c-5.768,0-10.73,3.392-13.04,8.282c7.586,1.841,15.509,2.824,23.662,2.824
+				c1.136,0,2.266-0.026,3.392-0.063C101.862,193.573,96.177,188.863,89.376,188.863z"/>
+		</g>
+	</g>
+</switch>
+</svg>

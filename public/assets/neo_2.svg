@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"  xmlns:i="&ns_ai;"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="200px" height="200px"
+	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<circle fill="#006AD2" cx="100" cy="100" r="100"/>
+		<g>
+			<path opacity="0.3" fill="#0B1B26" d="M120.685,30.608c0,7.917,6.418,14.5,14.335,14.5h48.335c-7.553-12-17.37-22-28.81-29
+				H135.02C127.103,16.108,120.685,22.694,120.685,30.608z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M106.638,74.108c0-15.805-12.812-29-28.616-29H16.643C6.13,60.108,0,79.79,0,100.218
+				c0,1.015,0.02,1.891,0.049,2.891h77.973C93.826,103.108,106.638,89.916,106.638,74.108z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M147.255,130.108c-15.808,0-28.622,12.695-28.622,28.5c0,15.807,12.814,28.5,28.622,28.5
+				h1.007c21.875-12,38.741-32.04,46.701-56.127c-2.333-0.612-4.783-0.873-7.31-0.873H147.255z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M149.963,87.608c0,7.917,6.417,14.5,14.333,14.5h35.678c0.011-1,0.023-1.473,0.023-2.104
+				c0-9.241-1.259-17.896-3.605-26.896h-32.096C156.38,73.108,149.963,79.693,149.963,87.608z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M77.704,130.108H55.191c-7.917,0-14.333,6.584-14.333,14.5c0,7.917,6.417,14.5,14.333,14.5
+				h22.513c7.916,0,14.332-6.583,14.332-14.5C92.036,136.693,85.62,130.108,77.704,130.108z"/>
+		</g>
+	</g>
+</switch>
+</svg>

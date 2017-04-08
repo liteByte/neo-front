@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"  xmlns:i="&ns_ai;"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="200px" height="200px"
+	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<circle fill="#006AD2" cx="100" cy="100" r="100"/>
+		<g>
+			<path opacity="0.3" fill="#0B1B26" d="M96.668,53.108c0-7.917-6.416-14-14.334-14H20.735c-6.577,8-11.806,18-15.367,28h76.966
+					C90.252,67.108,96.668,61.023,96.668,53.108z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M92.368,167.608c0,7.915,6.417,14.5,14.332,14.5h50.709c10.848-8,20.11-18,27.202-29H106.7
+				C98.785,153.108,92.368,159.692,92.368,167.608z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M126.767,96.108h21.058c7.917,0,14.334-6.585,14.334-14.5c0-7.917-6.417-14.5-14.334-14.5
+				h-21.058c-7.915,0-14.332,6.583-14.332,14.5C112.435,89.523,118.852,96.108,126.767,96.108z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M108.2,110.608c0-7.917-6.417-14.5-14.334-14.5H58.875c-7.915,0-14.332,6.583-14.332,14.5
+				c0,7.915,6.417,14.5,14.332,14.5h34.991C101.783,125.108,108.2,118.523,108.2,110.608z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M36.846,139.108c0-7.917-6.417-14-14.333-14H3.088c2.608,10,6.802,19,12.3,28h7.124
+				C30.429,153.108,36.846,147.023,36.846,139.108z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M117.287,22.608c0,7.916,6.417,14.5,14.332,14.5h45.835c-10.063-13-23.003-23-37.793-29
+				h-8.042C123.704,8.108,117.287,14.692,117.287,22.608z"/>
+			<path opacity="0.3" fill="#0B1B26" d="M166.463,110.608c0,7.915,6.417,14.5,14.332,14.5h16.117
+				c2.015-8,3.088-16.418,3.088-24.959c0-1.282-0.032-3.041-0.08-4.041h-19.125C172.88,96.108,166.463,102.691,166.463,110.608z"/>
+		</g>
+	</g>
+</switch>
+</svg>
