@@ -2,6 +2,10 @@ import React, {Component} from "react";
 import Drawer from "material-ui/Drawer";
 import List from "./List";
 
+const containerStyle = {
+  willChange: 'transform',
+};
+
 const overlayStyle = {
   backgroundColor: "rgba(0, 0, 0, .15)"
 };
@@ -21,6 +25,7 @@ export default class ListSectionResponsive extends Component {
         docked={false}
         width={120}
         onRequestChange={open => this.props.setOpen(open)}
+        containerStyle={containerStyle}
         overlayStyle={overlayStyle}
       >
         <div style={listContainerStyle}>

@@ -15,6 +15,7 @@ const headerStyle = {
   top: 0,
   zIndex: 1400,
   background: '#0a0a0a',
+  willChange: 'transform',
 };
 
 const divLeftStyle = {

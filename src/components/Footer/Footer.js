@@ -13,6 +13,7 @@ const footerStyle = {
   fontSize: '.80em',
   fontWeight: 100,
   textAlign: 'center',
+  willChange: 'transform',
 };
 
 export default class Footer extends Component {
