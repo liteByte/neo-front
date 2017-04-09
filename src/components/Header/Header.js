@@ -91,7 +91,7 @@ export default class Header extends Component {
               </a>
             </div>
           </MediaQuery>
-          <MediaQuery maxWidth={600} component="div" style={menuButtonStyle}>
+          <MediaQuery maxWidth={599} component="div" style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
               <MenuItem primaryText="About Us" onClick={() => this.setAboutOpen(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
