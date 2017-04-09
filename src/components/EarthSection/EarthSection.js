@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Space from "./Space";
 
 const sectionStyle = {
   width: '50%',
@@ -17,6 +18,7 @@ export default class EarthSection extends Component {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Earth</h2>
+        <Space/>
       </section>
     );
   }
