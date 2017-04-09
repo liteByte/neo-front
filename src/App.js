@@ -17,7 +17,7 @@ class App extends Component {
         <div style={{height: "100vh", minWidth: 300}}>
           <Header/>
           <Main/>
-          <MediaQuery component={Footer} minWidth={500}/>
+          <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
         </div>
       </MuiThemeProvider>
     );
