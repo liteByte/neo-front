@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 import InfoButton from "../InfoButton";
-import {GridList, GridTile} from "material-ui/GridList";
-import Neo from "./Neo";
-
-const cellSize = 100;
+import List from "./List";
 
 const sectionStyle = {
   width: '50%',
@@ -17,17 +14,10 @@ const titleStyle = {
   fontWeight: 'normal',
 };
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    width: '100%',
-    height: '100%',
-    overflowY: 'auto',
-  },
+const listContainerStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
 };
 
 export default class ListSection extends Component {
@@ -35,14 +25,8 @@ export default class ListSection extends Component {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
-        <div style={styles.root}>
-          <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
-            {this.props.neos.map((neo, index) => (
-              <GridTile key={index}>
-                <Neo color={neo.color} terrain={neo.terrain} cellSize={cellSize}/>
-              </GridTile>
-            ))}
-          </GridList>
+        <div style={listContainerStyle}>
+          <List neos={this.props.neos}/>
         </div>
       </section>
     );

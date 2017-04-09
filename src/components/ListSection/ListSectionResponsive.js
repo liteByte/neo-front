@@ -1,26 +1,16 @@
 import React, {Component} from "react";
 import Drawer from "material-ui/Drawer";
-import {GridList, GridTile} from "material-ui/GridList";
-import Neo from "./Neo";
-
-const cellSize = 100;
-
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    padding: '60px 10px'
-  },
-  gridList: {
-    width: '100%',
-    height: '100%',
-    overflowY: 'auto',
-  },
-};
+import List from "./List";
 
 const overlayStyle = {
   backgroundColor: "rgba(0, 0, 0, .15)"
+};
+
+const listContainerStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  padding: '60px 10px 10px 10px'
 };
 
 export default class ListSectionResponsive extends Component {
@@ -33,14 +23,8 @@ export default class ListSectionResponsive extends Component {
         onRequestChange={open => this.props.setOpen(open)}
         overlayStyle={overlayStyle}
       >
-        <div style={styles.root}>
-          <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
-            {this.props.neos.map((neo, index) => (
-              <GridTile key={index}>
-                <Neo color={neo.color} terrain={neo.terrain} cellSize={cellSize}/>
-              </GridTile>
-            ))}
-          </GridList>
+        <div style={listContainerStyle}>
+          <List neos={this.props.neos}/>
         </div>
       </Drawer>
     );
