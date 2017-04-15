@@ -113,6 +113,12 @@ export default class Neo extends Component {
     </g>,
   ];
 
+  constructor(props) {
+    super(props);
+
+    this.state = props.data;
+  }
+
   getArticleStyle = () => {
     tileStyle.width = this.props.cellSize;
     return tileStyle;
@@ -130,6 +136,16 @@ export default class Neo extends Component {
     return <circle fill={color} cx="100" cy="100" r="100"/>
   };
 
+  getPosition = () => {
+    const center = this.props.cellSize / 2;
+    const diameter = this.props.cellSize * this.state.display.size;
+    return center - diameter / 2;
+  };
+
+  getSize = () => {
+    return this.state.display.size * 100 + "%";
+  };
+
   render() {
     return (
       <article style={this.getArticleStyle()}>
@@ -137,14 +153,15 @@ export default class Neo extends Component {
           style={buttonStyle}
           iconStyle={iconStyle}
         >
-          <SvgIcon>
+          <SvgIcon viewBox="0 0 100 100">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              x="0px" y="0px"
+              x={this.getPosition()} y={this.getPosition()}
+              width={this.getSize()} height={this.getSize()}
               viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-              {this.getBase(this.getColor(this.props.color))}
-              {this.getTerrain(this.props.terrain)}
+              {this.getBase(this.getColor(this.state.color))}
+              {this.getTerrain(this.state.terrain)}
             </svg>
           </SvgIcon>
         </IconButton>
@@ -154,7 +171,6 @@ export default class Neo extends Component {
 }
 
 Neo.propTypes = {
-  color: React.PropTypes.number.isRequired,
-  terrain: React.PropTypes.number.isRequired,
+  data: React.PropTypes.object.isRequired,
   cellSize: React.PropTypes.number.isRequired,
 };

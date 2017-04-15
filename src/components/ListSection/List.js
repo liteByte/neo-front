@@ -19,7 +19,7 @@ export default class List extends Component {
       <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
         {this.props.neos.map((neo, index) => (
           <GridTile key={index}>
-            <Neo color={neo.color} terrain={neo.terrain} cellSize={cellSize}/>
+            <Neo data={neo} cellSize={cellSize}/>
           </GridTile>
         ))}
       </GridList>
