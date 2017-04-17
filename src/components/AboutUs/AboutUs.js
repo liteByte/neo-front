@@ -22,7 +22,7 @@ const bodyStyle = {
 };
 
 const dividerStyle = {
-  width: '80%',
+  width: 'calc(100% - 48px)',
   height: 2,
   position: 'fixed',
 };
