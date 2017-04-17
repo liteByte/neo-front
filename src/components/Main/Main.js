@@ -19,58 +19,107 @@ export default class Main extends Component {
     {
       color: 2,
       terrain: 4,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 36.6906137531,
         max: 82.0427064882,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 0,
       terrain: 5,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 58.1507039646,
         max: 130.0289270043,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 1,
       terrain: 1,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 231.5021222103,
         max: 517.6544821978,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 3,
       terrain: 1,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 384.1978910643,
         max: 859.0926012318,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 0,
       terrain: 0,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 167.7084621628,
         max: 375.0075217981,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 3,
       terrain: 2,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 13.3215566698,
         max: 29.7879062798,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     },
     {
       color: 1,
       terrain: 4,
+      id: '1',
+      name: '434734 (2006 FX)',
       size: {
         min: 69.9125232246,
         max: 156.3291544087,
-      }
+      },
+      approach: {
+        velocity: 1,
+        missDistance: 1,
+      },
+      isDangerous: false,
     }
   ];
 
