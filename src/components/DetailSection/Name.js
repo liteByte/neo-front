@@ -8,6 +8,7 @@ const containerStyle = {
   height,
   padding: '10px 0',
   margin: 10,
+  float: 'left',
   borderBottom: 'solid 2px rgba(255, 255, 255, 0.298039)',
 };
 
