@@ -62,11 +62,15 @@ export default class Velocity extends Component {
         <div style={rowStyle}>
           <div style={imgStyle}><img src="assets/velocidad.svg" alt="Vector" height="100%"/></div>
           <div style={numberContainerStyle}>
-            <div>VELOCITY</div>
+            <div style={{fontSize: '.75em'}}>VELOCITY</div>
             <div style={numberStyle}>{this.state.velocity}<span style={unitStyle}>km/h</span></div>
           </div>
         </div>
-        <div style={missStyle}>MISS DISTANCE {this.state.missDistance}km</div>
+        <div style={missStyle}>
+          <span style={{fontSize: '.75em'}}>MISS DISTANCE </span>
+          {this.state.missDistance}km
+          <InfoButton size={24}/>
+        </div>
       </div>
     );
   }

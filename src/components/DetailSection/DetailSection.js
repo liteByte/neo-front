@@ -13,8 +13,9 @@ const containerStyle = {
 };
 
 const rowStyle = {
+  display: 'inline-block',
   width: '100%',
-  marginBotton: 20,
+  marginBottom: 20,
 };
 
 export default class DetailSection extends Component {
@@ -46,12 +47,12 @@ export default class DetailSection extends Component {
   render() {
     return (
       <div style={containerStyle}>
+        <Name data={this.getName()}/>
         <div style={rowStyle}>
-          <Name data={this.getName()}/>
           <Size data={this.getSize()}/>
+          <Comparison data={this.getComparison()}/>
         </div>
         <div style={rowStyle}>
-          <Comparison data={this.getComparison()}/>
           <Velocity data={this.getVelocity()}/>
           <Assessment data={this.getAssessment()}/>
         </div>
