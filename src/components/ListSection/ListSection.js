@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import InfoButton from "../InfoButton";
 import List from "./List";
+import DetailSection from "../DetailSection/DetailSection";
 
 const sectionStyle = {
   width: '50%',
@@ -21,13 +22,30 @@ const listContainerStyle = {
 };
 
 export default class ListSection extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      detail: false,
+    };
+  }
+
+  setDetail = (detail) => {
+    this.setState({detail: detail});
+  };
+
   render() {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
-        <div style={listContainerStyle}>
-          <List neos={this.props.neos}/>
-        </div>
+        {this.state.detail ?
+          <DetailSection setDetail={this.setDetail}/>
+          :
+          <div style={listContainerStyle}>
+            <List neos={this.props.neos} setDetail={this.setDetail}/>
+          </div>
+        }
       </section>
     );
   }

@@ -19,7 +19,7 @@ export default class List extends Component {
       <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
         {this.props.neos.map((neo, index) => (
           <GridTile key={index}>
-            <Neo data={neo} cellSize={cellSize}/>
+            <Neo data={neo} cellSize={cellSize} setDetail={this.props.setDetail}/>
           </GridTile>
         ))}
       </GridList>
@@ -29,4 +29,5 @@ export default class List extends Component {
 
 List.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  setDetail: React.PropTypes.func.isRequired,
 };
