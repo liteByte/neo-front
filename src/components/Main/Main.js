@@ -74,7 +74,7 @@ export default class Main extends Component {
         velocity: 50505.109238,
         missDistance: 36433752.8768123,
       },
-      isDangerous: false,
+      isDangerous: true,
     },
     {
       color: 0,
@@ -89,7 +89,7 @@ export default class Main extends Component {
         velocity: 50505.109238,
         missDistance: 36433752.8768123,
       },
-      isDangerous: false,
+      isDangerous: true,
     },
     {
       color: 3,
