@@ -5,6 +5,11 @@ import Comparison from "./Comparison";
 import Velocity from "./Velocity";
 import Assessment from "./Assessment";
 
+const containerStyle = {
+  display: 'inline-block',
+  backgroundColor: 'rgba(10, 10, 10, 0.65098)',
+};
+
 export default class DetailSection extends Component {
 
   getName = () => {
@@ -33,7 +38,7 @@ export default class DetailSection extends Component {
 
   render() {
     return (
-      <div style={{backgroundColor: 'rgba(10, 10, 10, 0.65098)'}}>
+      <div style={containerStyle}>
         <Name data={this.getName()}/>
         <Size data={this.getSize()}/>
         <Comparison data={this.getComparison()}/>
