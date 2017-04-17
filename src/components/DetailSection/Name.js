@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import Neo from '../ListSection/Neo';
+import React, {Component} from "react";
+import Neo from "../ListSection/Neo";
 
 const height = 100;
 const neoWidth = 100;
 
 const containerStyle = {
   height,
-  padding: 10,
+  padding: '10px 0',
+  margin: 10,
+  borderBottom: 'solid 2px rgba(255, 255, 255, 0.298039)',
 };
 
 const neoContainerStyle = {
   width: neoWidth,
   height: '100%',
-  float: 'left',
+  float: 'left'
 };
 
 const nameContainerStyle = {
