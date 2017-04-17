@@ -27,7 +27,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -42,7 +42,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -57,7 +57,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -72,7 +72,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -87,7 +87,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -102,7 +102,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     },
@@ -117,7 +117,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 1,
+        missDistance: 36433752.8768123,
       },
       isDangerous: false,
     }
