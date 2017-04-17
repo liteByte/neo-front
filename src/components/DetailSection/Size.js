@@ -9,14 +9,14 @@ const containerStyle = {
 };
 
 const sizeStyle = {
-  fontSize: '3em',
+  fontSize: '3.5em',
   fontWeight: 'bold',
   fontFamily: 'Dosis, sans-serif',
   lineHeight: '1em',
 };
 
 const errorStyle = {
-  fontSize: '1.25em',
+  fontSize: '1.3em',
 };
 
 export default class Size extends Component {
@@ -33,8 +33,8 @@ export default class Size extends Component {
   render() {
     return (
       <div style={containerStyle}>
-        <div style={sizeStyle}>{this.state.size}<span style={{fontWeight: 'normal'}}> m</span></div>
-        <div style={errorStyle}>&plusmn;{this.state.error} m</div>
+        <div style={sizeStyle}>{this.state.size}<span style={{fontWeight: 'normal'}}>m</span></div>
+        <div style={errorStyle}>&plusmn; {this.state.error} m</div>
       </div>
     );
   }

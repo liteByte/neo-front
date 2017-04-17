@@ -22,6 +22,8 @@ const neoContainerStyle = {
 const nameContainerStyle = {
   width: `calc(100% - ${neoWidth}px)`,
   height: '100%',
+  paddingLeft: 10,
+  boxSizing: 'border-box',
   float: 'left',
 };
 
@@ -32,7 +34,12 @@ const idStyle = {
 const nameStyle = {
   margin: '10px 0 0 0',
   fontFamily: 'Dosis, sans-serif',
-  fontSize: '2em',
+  fontSize: '2.5em',
+  width: '100%',
+  overflowX: 'hidden',
+  height: 50,
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 };
 
 const dividerStyle = {
@@ -51,7 +58,7 @@ export default class Name extends Component {
         </div>
         <div style={nameContainerStyle}>
           <div style={idStyle}>ID: {this.props.data.id}</div>
-          <h2 style={nameStyle}>{this.props.data.name}</h2>
+          <h2 style={nameStyle} title={this.props.data.name}>{this.props.data.name}</h2>
         </div>
         <Divider style={dividerStyle}/>
       </div>
