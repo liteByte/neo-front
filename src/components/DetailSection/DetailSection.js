@@ -6,7 +6,9 @@ import Velocity from "./Velocity";
 import Assessment from "./Assessment";
 
 const containerStyle = {
+  height: 'calc(100% - 58px)',
   display: 'inline-block',
+  overflowY: 'auto',
   backgroundColor: 'rgba(10, 10, 10, 0.65098)',
 };
 

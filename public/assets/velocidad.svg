@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"  xmlns:i="&ns_ai;"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="119.3px" height="93.61px"
+	 viewBox="0 0 119.3 93.61" enable-background="new 0 0 119.3 93.61" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<g>
+			<g>
+				<g>
+					<g>
+						<polygon fill="#FFFFFF" points="113.585,87.634 0,87.634 85.361,2.273 88.896,5.809 12.071,82.634 113.585,82.634 						"/>
+					</g>
+					<g>
+						<g>
+							<polygon fill="#FFFFFF" points="74.092,5.09 86.083,5.086 86.08,17.077 91.169,11.988 91.169,0 79.182,0 							"/>
+						</g>
+					</g>
+					<g>
+						<g>
+							<polygon fill="#FFFFFF" points="103.626,93.61 112.108,85.134 103.626,76.657 110.824,76.657 119.3,85.134 110.824,93.61 
+															"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g>
+				<path fill="#FFFFFF" d="M61.951,84.473h-5c0-13.098-5.101-25.413-14.363-34.675l3.535-3.535
+					C56.33,56.469,61.951,70.039,61.951,84.473z"/>
+			</g>
+		</g>
+	</g>
+</switch>
+</svg>

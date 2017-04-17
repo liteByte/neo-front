@@ -26,7 +26,7 @@ export default class Main extends Component {
         max: 82.0427064882,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -41,7 +41,7 @@ export default class Main extends Component {
         max: 130.0289270043,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -56,7 +56,7 @@ export default class Main extends Component {
         max: 517.6544821978,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -71,7 +71,7 @@ export default class Main extends Component {
         max: 859.0926012318,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -86,7 +86,7 @@ export default class Main extends Component {
         max: 375.0075217981,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -101,7 +101,7 @@ export default class Main extends Component {
         max: 29.7879062798,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
@@ -116,7 +116,7 @@ export default class Main extends Component {
         max: 156.3291544087,
       },
       approach: {
-        velocity: 1,
+        velocity: 50505.109238,
         missDistance: 1,
       },
       isDangerous: false,
