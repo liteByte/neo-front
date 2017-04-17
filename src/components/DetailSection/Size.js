@@ -34,7 +34,7 @@ export default class Size extends Component {
     return (
       <div style={containerStyle}>
         <div style={sizeStyle}>{this.state.size}<span style={{fontWeight: 'normal'}}>m</span></div>
-        <div style={errorStyle}>&plusmn; {this.state.error} m</div>
+        <div style={errorStyle}>&plusmn; {this.state.error}m</div>
       </div>
     );
   }

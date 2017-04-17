@@ -12,6 +12,11 @@ const containerStyle = {
   backgroundColor: 'rgba(10, 10, 10, 0.65098)',
 };
 
+const rowStyle = {
+  width: '100%',
+  marginBotton: 20,
+};
+
 export default class DetailSection extends Component {
 
   getName = () => {
@@ -41,11 +46,15 @@ export default class DetailSection extends Component {
   render() {
     return (
       <div style={containerStyle}>
-        <Name data={this.getName()}/>
-        <Size data={this.getSize()}/>
-        <Comparison data={this.getComparison()}/>
-        <Velocity data={this.getVelocity()}/>
-        <Assessment data={this.getAssessment()}/>
+        <div style={rowStyle}>
+          <Name data={this.getName()}/>
+          <Size data={this.getSize()}/>
+        </div>
+        <div style={rowStyle}>
+          <Comparison data={this.getComparison()}/>
+          <Velocity data={this.getVelocity()}/>
+          <Assessment data={this.getAssessment()}/>
+        </div>
       </div>
     );
   }

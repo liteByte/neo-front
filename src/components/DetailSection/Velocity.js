@@ -22,7 +22,7 @@ const imgStyle = {
 
 const numberContainerStyle = {
   width: '70%',
-  paddingLeft: 5,
+  paddingLeft: 10,
   boxSizing: 'border-box',
   float: 'left',
 };
@@ -66,7 +66,7 @@ export default class Velocity extends Component {
             <div style={numberStyle}>{this.state.velocity}<span style={unitStyle}>km/h</span></div>
           </div>
         </div>
-        <div style={missStyle}>MISS DISTANCE {this.state.missDistance} km</div>
+        <div style={missStyle}>MISS DISTANCE {this.state.missDistance}km</div>
       </div>
     );
   }
