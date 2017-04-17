@@ -95,12 +95,17 @@ export default class Main extends Component {
     const minDisplaySize = .1;
     for (let i = 0; i < neos.length; i++) {
       const neo = neos[i];
-      let size = biggest > 0? neo.size.avg / biggest : 1;
+      let size = biggest > 0 ? neo.size.avg / biggest : 1;
       if (size < minDisplaySize) size = minDisplaySize;
       neo.display = {
         size: size
       };
     }
+
+    this.neos = this.neos.sort((a, b) => {
+      if (a.size.avg === b.size.avg) return 0;
+      return a.size.avg > b.size.avg ? -1 : 1;
+    });
   }
 
   setDrawerOpen = (open) => {
