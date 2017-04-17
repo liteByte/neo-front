@@ -4,7 +4,7 @@ import List from "./List";
 import DetailSection from "../DetailSection/DetailSection";
 
 const sectionStyle = {
-  width: '50%',
+  width: 'calc(50% - 10px)',
   float: 'left',
   height: '100%',
 };
@@ -27,12 +27,17 @@ export default class ListSection extends Component {
     super(props);
 
     this.state = {
-      detail: false,
+      detail: true,
+      neo: this.props.neos[0]
     };
   }
 
-  setDetail = (detail) => {
-    this.setState({detail: detail});
+  selectNeo = (neo) => {
+    const state = {
+      detail: !!neo,
+      neo: neo,
+    };
+    this.setState(state);
   };
 
   render() {
@@ -40,10 +45,10 @@ export default class ListSection extends Component {
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
         {this.state.detail ?
-          <DetailSection setDetail={this.setDetail}/>
+          <DetailSection selectNeo={this.selectNeo} neo={this.state.neo}/>
           :
           <div style={listContainerStyle}>
-            <List neos={this.props.neos} setDetail={this.setDetail}/>
+            <List neos={this.props.neos} selectNeo={this.selectNeo}/>
           </div>
         }
       </section>

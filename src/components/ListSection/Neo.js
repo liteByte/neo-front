@@ -152,7 +152,7 @@ export default class Neo extends Component {
         <IconButton
           style={buttonStyle}
           iconStyle={iconStyle}
-          onClick={() => this.props.setDetail(true)}
+          onClick={() => this.props.selectNeo ? this.props.selectNeo(this.props.data) : null}
         >
           <SvgIcon viewBox="0 0 100 100">
             <svg
@@ -174,5 +174,5 @@ export default class Neo extends Component {
 Neo.propTypes = {
   data: React.PropTypes.object.isRequired,
   cellSize: React.PropTypes.number.isRequired,
-  setDetail: React.PropTypes.func.isRequired,
+  selectNeo: React.PropTypes.func,
 };

@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import Space from "./Space";
 
 const sectionStyle = {
-  width: '50%',
-  float: 'left',
+  width: 'calc(50% - 10px)',
+  float: 'right',
   height: '100%',
 };
 
