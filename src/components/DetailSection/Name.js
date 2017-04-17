@@ -1,15 +1,16 @@
 import React, {Component} from "react";
+import Divider from "material-ui/Divider";
 import Neo from "../ListSection/Neo";
 
 const height = 100;
 const neoWidth = 100;
 
 const containerStyle = {
-  height,
-  padding: '10px 0',
-  margin: 10,
+  height: height + 20,
+  width: '100%',
+  padding: 10,
+  boxSizing: 'border-box',
   float: 'left',
-  borderBottom: 'solid 2px rgba(255, 255, 255, 0.298039)',
 };
 
 const neoContainerStyle = {
@@ -34,6 +35,13 @@ const nameStyle = {
   fontSize: '2em',
 };
 
+const dividerStyle = {
+  width: '100%',
+  height: 2,
+  marginTop: 5,
+  float: 'left',
+};
+
 export default class Name extends Component {
   render() {
     return (
@@ -45,6 +53,7 @@ export default class Name extends Component {
           <div style={idStyle}>ID: {this.props.data.id}</div>
           <h2 style={nameStyle}>{this.props.data.name}</h2>
         </div>
+        <Divider style={dividerStyle}/>
       </div>
     );
   }
