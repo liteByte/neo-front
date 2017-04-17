@@ -5,8 +5,8 @@ import IconInfo from "material-ui/svg-icons/action/info-outline";
 export default class InfoButton extends Component {
 
   style = {
-    width: 32,
-    height: 32,
+    width: this.props.size || 32,
+    height: this.props.size || 32,
     padding: 0,
     top: 5,
     left: 5,
@@ -20,3 +20,7 @@ export default class InfoButton extends Component {
     )
   }
 }
+
+InfoButton.propTypes = {
+  size: React.PropTypes.number,
+};
