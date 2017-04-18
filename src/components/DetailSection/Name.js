@@ -29,10 +29,11 @@ const nameContainerStyle = {
 
 const idStyle = {
   marginTop: 10,
+  fontSize: '1.2em',
 };
 
 const nameStyle = {
-  margin: '10px 0 0 0',
+  margin: '8px 0 0 0',
   fontFamily: 'Dosis, sans-serif',
   fontSize: '2.5em',
   width: '100%',
