@@ -38,13 +38,6 @@ const unitStyle = {
   fontWeight: 'normal',
 };
 
-const missStyle = {
-  width: '100%',
-  marginTop: 10,
-  float: 'left',
-  fontSize: '1em'
-};
-
 export default class Velocity extends Component {
 
   constructor(props) {
