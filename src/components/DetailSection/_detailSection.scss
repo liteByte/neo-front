@@ -19,8 +19,12 @@
     display: inline-block;
     width: 100%;
 
-    &:first-child {
+    &:nth-child(2) {
       margin-bottom: 20px;
+
+      @media (min-width: 1000px) {
+        margin-bottom: 25px;
+      }
     }
 
     &:last-child {
