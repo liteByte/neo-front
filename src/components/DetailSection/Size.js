@@ -6,9 +6,13 @@ export default class Size extends Component {
     super(props);
 
     this.state = {
-      size: this.props.data.avg.toFixed(2),
-      error: ((this.props.data.max - this.props.data.min) / 2).toFixed(2),
+      size: addCommas(this.props.data.avg.toFixed(2)),
+      error: addCommas(((this.props.data.max - this.props.data.min) / 2).toFixed(2)),
     };
+
+    function addCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
   }
 
   render() {

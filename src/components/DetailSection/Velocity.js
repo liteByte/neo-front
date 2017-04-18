@@ -8,9 +8,13 @@ export default class Velocity extends Component {
     super(props);
 
     this.state = {
-      velocity: this.props.data.velocity.toFixed(0),
-      missDistance: this.props.data.missDistance.toFixed(2),
+      velocity: addCommas(this.props.data.velocity.toFixed(0)),
+      missDistance: addCommas(this.props.data.missDistance.toFixed(2)),
     };
+
+    function addCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
   }
 
   render() {
