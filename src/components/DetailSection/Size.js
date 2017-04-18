@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 const containerStyle = {
-  width: '60%',
+  width: '55%',
   padding: 10,
   boxSizing: 'border-box',
   float: 'left',

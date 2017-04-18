@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import InfoButton from "../InfoButton";
 
 const containerStyle = {
-  width: '60%',
+  width: '55%',
   padding: 10,
   boxSizing: 'border-box',
   float: 'left',
@@ -62,15 +62,12 @@ export default class Velocity extends Component {
         <div style={rowStyle}>
           <div style={imgStyle}><img src="assets/velocidad.svg" alt="Vector" height="100%"/></div>
           <div style={numberContainerStyle}>
-            <div style={{fontSize: '.75em'}}>VELOCITY</div>
+            <div style={{fontSize: '.85em'}}>VELOCITY</div>
             <div style={numberStyle}>{this.state.velocity}<span style={unitStyle}>km/h</span></div>
           </div>
         </div>
-        <div style={missStyle}>
-          <span style={{fontSize: '.75em'}}>MISS DISTANCE </span>
-          {this.state.missDistance}km
-          <InfoButton size={24}/>
-        </div>
+        <div style={{width: '100%', float: 'left', fontSize: '.85em'}}>MISS DISTANCE<InfoButton size={24}/></div>
+        <div style={{width: '100%', float: 'left', marginTop: 5, fontSize: '1.3em'}}>{this.state.missDistance}km</div>
       </div>
     );
   }

@@ -7,6 +7,8 @@ import Assessment from "./Assessment";
 
 const containerStyle = {
   height: 'calc(100% - 58px)',
+  padding: 10,
+  boxSizing: 'border-box',
   display: 'inline-block',
   overflowY: 'auto',
   backgroundColor: 'rgba(10, 10, 10, 0.65098)',

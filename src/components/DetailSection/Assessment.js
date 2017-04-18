@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 const containerStyle = {
-  width: '40%',
+  width: '45%',
   padding: 10,
   boxSizing: 'border-box',
   float: 'left',
@@ -10,7 +10,7 @@ const containerStyle = {
 
 const imgStyle = {
   width: '100%',
-  height: 60,
+  height: 83,
   float: 'left',
 };
 
@@ -20,6 +20,7 @@ const descStyle = {
   float: 'left',
   fontFamily: 'Dosis, sans-serif',
   fontWeight: 'bold',
+  fontSize: '1.3em'
 };
 
 export default class Assessment extends Component {

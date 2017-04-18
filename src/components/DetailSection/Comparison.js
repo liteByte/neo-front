@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const containerStyle = {
-  width: '40%',
+  width: '45%',
   padding: 10,
   boxSizing: 'border-box',
   float: 'left',
@@ -26,6 +26,7 @@ const numberContainerStyle = {
   float: 'left',
   fontWeight: 'bold',
   fontFamily: 'Dosis, sans-serif',
+  fontSize: '1.5em',
 };
 
 const numberStyle = {
