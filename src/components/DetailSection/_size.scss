@@ -1,9 +1,13 @@
 .size-container {
-  width: 55%;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
   float: left;
   text-align: center;
+
+  @media (min-width: 1000px) {
+    width: 55%;
+  }
 
   .size {
     font-size: 3.5em;

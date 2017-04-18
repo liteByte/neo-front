@@ -23,12 +23,12 @@ export default class Velocity extends Component {
             <div className="number-number">{this.state.velocity}<span className="unit">km/h</span></div>
           </div>
         </div>
-        <MediaQuery minWidth={1200}>
+        <MediaQuery minWidth={1325}>
           {matches => {
             return matches ?
               <div className="miss-title">MISS DISTANCE
                 <span className="miss-number"> {this.state.missDistance}km</span>
-                <InfoButton size={24}/>
+                <InfoButton/>
               </div>
               :
               <div>

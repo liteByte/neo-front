@@ -1,9 +1,13 @@
 .size-container {
-  width: 55%;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
   float: left;
   text-align: center; }
+
+@media (min-width: 1000px) {
+  .size-container {
+    width: 55%; } }
 
 .size-container .size {
   font-size: 3.5em;
@@ -23,11 +27,22 @@
     font-size: 2vw; } }
 
 .comparison-container {
-  width: 45%;
+  width: 100%;
+  max-width: 220px;
   padding: 17px 10px 10px 10px;
   box-sizing: border-box;
   float: left;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center; }
+
+@media (min-width: 1000px) {
+  .comparison-container {
+    width: 45%;
+    max-width: none;
+    left: 0;
+    transform: none; } }
 
 .comparison-container .row {
   width: 100%;
@@ -89,13 +104,21 @@
 .velocity-container .row .image {
   width: 30%;
   height: 100%;
-  float: left; }
+  float: left;
+  display: none; }
+
+@media (min-width: 1000px) {
+  .velocity-container .row .image {
+    display: block; } }
 
 .velocity-container .row .number-container {
   width: 70%;
-  padding-left: 10px;
   box-sizing: border-box;
   float: left; }
+
+@media (min-width: 1000px) {
+  .velocity-container .row .number-container {
+    padding-left: 10px; } }
 
 .velocity-container .row .number-container .number-title {
   font-size: .85em; }
@@ -186,6 +209,13 @@
 
 .detail-container > .row:first-child {
   margin-bottom: 20px; }
+
+@media (max-width: 1000px) {
+  .detail-container > .row:last-child {
+    max-width: 350px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); } }
 
 body {
   margin: 0;
