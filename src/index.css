@@ -210,7 +210,7 @@
 .detail-container > .row:first-child {
   margin-bottom: 20px; }
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   .detail-container > .row:last-child {
     max-width: 350px;
     position: relative;
