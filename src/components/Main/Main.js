@@ -26,8 +26,8 @@ export default class Main extends Component {
         max: 82.0427064882,
       },
       approach: {
-        velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        velocity: 40505.109238,
+        missDistance: 30.8768123,
       },
       isDangerous: false,
     },
@@ -128,6 +128,8 @@ export default class Main extends Component {
 
     this.state = {
       drawer: false,
+      neo: null,
+      detail: false,
     };
 
     const neos = this.neos;
@@ -163,23 +165,47 @@ export default class Main extends Component {
     })
   };
 
+  selectNeo = (neo) => {
+    const state = {
+      detail: !!neo,
+      neo: neo,
+      drawer: false,
+    };
+    this.setState(state);
+  };
+
   render() {
     return (
       <main style={style}>
-        <MediaQuery minWidth={500}>
+        <MediaQuery minWidth={750}>
           {matches => {
             return matches ?
-              <ListSection neos={this.neos}/>
+              <ListSection
+                neos={this.neos}
+                detail={this.state.detail}
+                neo={this.state.neo}
+                selectNeo={this.selectNeo}
+              />
               :
-              <ListSectionResponsive neos={this.neos} open={this.state.drawer} setOpen={this.setDrawerOpen}/>
+              <ListSectionResponsive
+                neos={this.neos}
+                open={this.state.drawer}
+                setOpen={this.setDrawerOpen}
+                selectNeo={this.selectNeo}
+              />
           }}
         </MediaQuery>
-        <MediaQuery minWidth={500}>
+        <MediaQuery minWidth={750}>
           {matches => {
             return matches ?
               <EarthSection/>
               :
-              <EarthSectionResponsive setOpen={this.setDrawerOpen}/>
+              <EarthSectionResponsive
+                setOpen={this.setDrawerOpen}
+                detail={this.state.detail}
+                neo={this.state.neo}
+                selectNeo={this.selectNeo}
+              />
           }}
         </MediaQuery>
       </main>

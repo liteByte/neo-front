@@ -22,33 +22,15 @@ const listContainerStyle = {
 };
 
 export default class ListSection extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      detail: true,
-      neo: this.props.neos[0]
-    };
-  }
-
-  selectNeo = (neo) => {
-    const state = {
-      detail: !!neo,
-      neo: neo,
-    };
-    this.setState(state);
-  };
-
   render() {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
-        {this.state.detail ?
-          <DetailSection selectNeo={this.selectNeo} neo={this.state.neo}/>
+        {this.props.detail ?
+          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo}/>
           :
           <div style={listContainerStyle}>
-            <List neos={this.props.neos} selectNeo={this.selectNeo}/>
+            <List neos={this.props.neos} selectNeo={this.props.selectNeo}/>
           </div>
         }
       </section>
@@ -58,4 +40,7 @@ export default class ListSection extends Component {
 
 ListSection.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  neo: React.PropTypes.object,
+  selectNeo: React.PropTypes.func.isRequired,
+  detail: React.PropTypes.bool.isRequired,
 };

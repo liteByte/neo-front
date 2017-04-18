@@ -4,10 +4,17 @@ export default class Size extends Component {
 
   constructor(props) {
     super(props);
+    this.updateState(props);
+  }
 
+  componentWillReceiveProps(nextProps) {
+    this.updateState(nextProps);
+  }
+
+  updateState(props) {
     this.state = {
-      size: addCommas(this.props.data.avg.toFixed(2)),
-      error: addCommas(((this.props.data.max - this.props.data.min) / 2).toFixed(2)),
+      size: addCommas(props.data.avg.toFixed(2)),
+      error: addCommas(((props.data.max - props.data.min) / 2).toFixed(2)),
     };
 
     function addCommas(x) {

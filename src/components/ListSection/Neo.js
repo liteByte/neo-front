@@ -115,7 +115,14 @@ export default class Neo extends Component {
 
   constructor(props) {
     super(props);
+    this.updateState(props);
+  }
 
+  componentWillReceiveProps(nextProps) {
+    this.updateState(nextProps);
+  }
+
+  updateState(props) {
     this.state = props.data;
   }
 

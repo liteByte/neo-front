@@ -29,7 +29,7 @@ export default class ListSectionResponsive extends Component {
         overlayStyle={overlayStyle}
       >
         <div style={listContainerStyle}>
-          <List neos={this.props.neos}/>
+          <List neos={this.props.neos} selectNeo={this.props.selectNeo}/>
         </div>
       </Drawer>
     );
@@ -40,4 +40,5 @@ ListSectionResponsive.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   open: React.PropTypes.bool.isRequired,
   setOpen: React.PropTypes.func.isRequired,
+  selectNeo: React.PropTypes.func.isRequired,
 };
