@@ -1,24 +1,5 @@
 import React, {Component} from "react";
 
-const containerStyle = {
-  width: '55%',
-  padding: 10,
-  boxSizing: 'border-box',
-  float: 'left',
-  textAlign: 'center',
-};
-
-const sizeStyle = {
-  fontSize: '3.5em',
-  fontWeight: 'bold',
-  fontFamily: 'Dosis, sans-serif',
-  lineHeight: '1em',
-};
-
-const errorStyle = {
-  fontSize: '1.3em',
-};
-
 export default class Size extends Component {
 
   constructor(props) {
@@ -32,9 +13,9 @@ export default class Size extends Component {
 
   render() {
     return (
-      <div style={containerStyle}>
-        <div style={sizeStyle}>{this.state.size}<span style={{fontWeight: 'normal'}}>m</span></div>
-        <div style={errorStyle}>&plusmn; {this.state.error}m</div>
+      <div className="size-container">
+        <div className="size">{this.state.size}<span style={{fontWeight: 'normal'}}>m</span></div>
+        <div className="error">&plusmn; {this.state.error}m</div>
       </div>
     );
   }

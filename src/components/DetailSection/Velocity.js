@@ -1,42 +1,6 @@
 import React, {Component} from "react";
+import MediaQuery from "react-responsive";
 import InfoButton from "../InfoButton";
-
-const containerStyle = {
-  width: '55%',
-  padding: 10,
-  boxSizing: 'border-box',
-  float: 'left',
-};
-
-const rowStyle = {
-  width: '100%',
-  height: 60,
-  float: 'left',
-};
-
-const imgStyle = {
-  width: '30%',
-  height: '100%',
-  float: 'left',
-};
-
-const numberContainerStyle = {
-  width: '70%',
-  paddingLeft: 10,
-  boxSizing: 'border-box',
-  float: 'left',
-};
-
-const numberStyle = {
-  fontSize: '2.3em',
-  fontFamily: 'Dosis, sans-serif',
-  fontWeight: 'bold',
-};
-
-const unitStyle = {
-  fontSize: '1.25rem',
-  fontWeight: 'normal',
-};
 
 export default class Velocity extends Component {
 
@@ -51,16 +15,28 @@ export default class Velocity extends Component {
 
   render() {
     return (
-      <div style={containerStyle}>
-        <div style={rowStyle}>
-          <div style={imgStyle}><img src="assets/velocidad.svg" alt="Vector" height="100%"/></div>
-          <div style={numberContainerStyle}>
-            <div style={{fontSize: '.85em'}}>VELOCITY</div>
-            <div style={numberStyle}>{this.state.velocity}<span style={unitStyle}>km/h</span></div>
+      <div className="velocity-container">
+        <div className="row">
+          <div className="image"><img src="assets/velocidad.svg" alt="Vector" height="100%"/></div>
+          <div className="number-container">
+            <div className="number-title">VELOCITY</div>
+            <div className="number-number">{this.state.velocity}<span className="unit">km/h</span></div>
           </div>
         </div>
-        <div style={{width: '100%', float: 'left', fontSize: '.85em'}}>MISS DISTANCE<InfoButton size={24}/></div>
-        <div style={{width: '100%', float: 'left', marginTop: 5, fontSize: '1.3em'}}>{this.state.missDistance}km</div>
+        <MediaQuery minWidth={1200}>
+          {matches => {
+            return matches ?
+              <div className="miss-title">MISS DISTANCE
+                <span className="miss-number"> {this.state.missDistance}km</span>
+                <InfoButton size={24}/>
+              </div>
+              :
+              <div>
+                <div className="miss-title">MISS DISTANCE<InfoButton size={24}/></div>
+                <div className="miss-number">{this.state.missDistance}km</div>
+              </div>
+          }}
+        </MediaQuery>
       </div>
     );
   }

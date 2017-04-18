@@ -5,21 +5,6 @@ import Comparison from "./Comparison";
 import Velocity from "./Velocity";
 import Assessment from "./Assessment";
 
-const containerStyle = {
-  height: 'calc(100% - 58px)',
-  padding: 10,
-  boxSizing: 'border-box',
-  display: 'inline-block',
-  overflowY: 'auto',
-  backgroundColor: 'rgba(10, 10, 10, 0.65098)',
-};
-
-const rowStyle = {
-  display: 'inline-block',
-  width: '100%',
-  marginBottom: 20,
-};
-
 export default class DetailSection extends Component {
 
   getName = () => {
@@ -48,13 +33,13 @@ export default class DetailSection extends Component {
 
   render() {
     return (
-      <div style={containerStyle}>
+      <div className="detail-container">
         <Name data={this.getName()}/>
-        <div style={rowStyle}>
+        <div className="row">
           <Size data={this.getSize()}/>
           <Comparison data={this.getComparison()}/>
         </div>
-        <div style={rowStyle}>
+        <div className="row">
           <Velocity data={this.getVelocity()}/>
           <Assessment data={this.getAssessment()}/>
         </div>

@@ -1,28 +1,5 @@
 import React, {Component} from "react";
 
-const containerStyle = {
-  width: '45%',
-  padding: 10,
-  boxSizing: 'border-box',
-  float: 'left',
-  textAlign: 'center',
-};
-
-const imgStyle = {
-  width: '100%',
-  height: 83,
-  float: 'left',
-};
-
-const descStyle = {
-  width: '100%',
-  marginTop: 10,
-  float: 'left',
-  fontFamily: 'Dosis, sans-serif',
-  fontWeight: 'bold',
-  fontSize: '1.3em'
-};
-
 export default class Assessment extends Component {
 
   getImg = () => {
@@ -31,9 +8,9 @@ export default class Assessment extends Component {
 
   render() {
     return (
-      <div style={containerStyle}>
-        <div style={imgStyle}><img src={`assets/${this.getImg()}.svg`} alt="Assessment" height="100%"/></div>
-        <div style={descStyle}>{this.props.data ? 'DANGEROUS' : 'SAFE'}</div>
+      <div className="assessment-container">
+        <div className="image"><img src={`assets/${this.getImg()}.svg`} alt="Assessment" height="100%"/></div>
+        <div className="description">{this.props.data ? 'DANGEROUS' : 'SAFE'}</div>
       </div>
     );
   }
