@@ -31,7 +31,7 @@ export default class Name extends Component {
         <div style={neoContainerStyle} className="neo-container">
           <Neo data={this.props.data} cellSize={neoWidth}/>
         </div>
-        <div style={nameContainerStyle} className="name-container">
+        <div style={nameContainerStyle} className="container">
           <div className="id">ID: {this.props.data.id}</div>
           <h2 className="name" title={this.props.data.name}>{this.props.data.name}</h2>
         </div>
