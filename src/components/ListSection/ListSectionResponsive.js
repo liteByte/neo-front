@@ -23,7 +23,7 @@ export default class ListSectionResponsive extends Component {
       <Drawer
         open={this.props.open}
         docked={false}
-        width={120}
+        width={130}
         onRequestChange={open => this.props.setOpen(open)}
         containerStyle={containerStyle}
         overlayStyle={overlayStyle}

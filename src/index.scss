@@ -13,3 +13,25 @@ body {
 img {
   max-width: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(18, 43, 58, .09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(18, 43, 58, .5);
+  -webkit-border-radius: 100px;
+  background-clip: padding-box;
+  border: 6px solid rgba(0, 0, 0, 0);
+  min-height: 10px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(18, 43, 58, .61);
+  -webkit-border-radius: 100px;
+}
