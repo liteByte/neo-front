@@ -5,7 +5,6 @@
 @import "_assessment.scss";
 
 .detail-container {
-  height: calc(100% - 58px);
   padding: 10px;
   box-sizing: border-box;
   position: relative;
@@ -28,6 +27,8 @@
   @import "comparison-small";
   @import "velocity-small";
   @import "assessment-small";
+
+  height: calc(100% - 58px);
 
   @media (min-width: 1200px) {
     padding: 20px;
@@ -60,8 +61,17 @@
   @import "velocity-big";
   @import "assessment-big";
 
+  height: calc(100% - 50px);
+  position: absolute;
+  top: 50px;
+  left: 0;
+
   @media (min-width: 600px) {
     padding: 20px;
+  }
+
+  @media (min-width: 500px) and (min-height: 400px) {
+    height: calc(100% - 100px);
   }
 
   @media (min-width: 500px) {
