@@ -61,7 +61,7 @@
   @import "velocity-big";
   @import "assessment-big";
 
-  height: calc(100% - 50px);
+  height: calc(100vh - 50px);
   position: absolute;
   top: 50px;
   left: 0;
@@ -71,7 +71,7 @@
   }
 
   @media (min-width: 500px) and (min-height: 400px) {
-    height: calc(100% - 100px);
+    height: calc(100vh - 100px);
   }
 
   @media (min-width: 500px) {
