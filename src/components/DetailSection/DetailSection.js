@@ -1,9 +1,17 @@
 import React, {Component} from "react";
+import IconButton from "material-ui/IconButton";
+import IconClose from "material-ui/svg-icons/navigation/close";
 import Name from "./Name";
 import Size from "./Size";
 import Comparison from "./Comparison";
 import Velocity from "./Velocity";
 import Assessment from "./Assessment";
+
+const closeStyle = {
+  position: 'absolute',
+  top: 0,
+  right: 0,
+};
 
 export default class DetailSection extends Component {
 
@@ -34,6 +42,7 @@ export default class DetailSection extends Component {
   render() {
     return (
       <div className={"detail-container " + this.props.class}>
+        <IconButton style={closeStyle} onClick={() => this.props.selectNeo(null)}><IconClose/></IconButton>
         <Name data={this.getName()}/>
         <div className="row">
           <Size data={this.getSize()}/>
