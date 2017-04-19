@@ -34,13 +34,21 @@ export default class Velocity extends Component {
           </div>
         </div>
         <div className="miss-small">
-          <div className="miss-title">MISS DISTANCE<InfoButton size={24}/></div>
+          <div className="miss-title">
+            MISS DISTANCE
+            <InfoButton
+              size={24}
+              title="MISS DISTANCE"
+              description="The minimum separation between two bodies (the closest it will get to Earth)."/>
+          </div>
           <div className="miss-number">{this.state.missDistance}km</div>
         </div>
         <div className="miss-big">
           <div className="miss-title">MISS DISTANCE
             <span className="miss-number"> {this.state.missDistance}km</span>
-            <InfoButton/>
+            <InfoButton
+              title="MISS DISTANCE"
+              description="The minimum separation between two bodies (the closest it will get to Earth)."/>
           </div>
         </div>
       </div>

@@ -31,7 +31,12 @@ export default class ListSection extends Component {
   render() {
     return (
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
+        <h2 style={titleStyle}>
+          Near Earth Objects
+          <InfoButton
+            title="NEAR EARTH OBJECT"
+            description="A small Solar System body whose orbit brings it close to the Earth."/>
+        </h2>
         <CSSTransitionGroup
           transitionName="detail-transition"
           transitionEnterTimeout={200}

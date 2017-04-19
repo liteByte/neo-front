@@ -37,7 +37,12 @@ export default class EarthSectionResponsive extends Component {
             <DetailSection key={0} selectNeo={this.props.selectNeo} neo={this.props.neo} class="big"/>
             :
             <div key={1} style={{width: '100%', height: '100%'}}>
-              <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
+              <h2 style={titleStyle}>
+                Near Earth Objects
+                <InfoButton
+                  title="NEAR EARTH OBJECT"
+                  description="A small Solar System body whose orbit brings it close to the Earth."/>
+              </h2>
               <IconButton style={iconStyle} onClick={() => this.props.setOpen(true)}>
                 <IconChevronRight/>
               </IconButton>
