@@ -79,7 +79,7 @@ export default class Header extends Component {
       <header style={headerStyle}>
         <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
         <div style={divLeftStyle}>
-          <img alt="logo" src="assets/header_logo.svg" style={imgStyle}/>
+          <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
           <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>

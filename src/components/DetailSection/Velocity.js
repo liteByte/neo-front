@@ -27,7 +27,7 @@ export default class Velocity extends Component {
     return (
       <div className="velocity-container">
         <div className="row">
-          <div className="image"><img src="assets/velocidad.svg" alt="Vector" height="100%"/></div>
+          <div className="image"><img src="/assets/velocidad.svg" alt="Vector" height="100%"/></div>
           <div className="number-container">
             <div className="number-title">VELOCITY</div>
             <div className="number-number">{this.state.velocity}<span className="unit">km/h</span></div>

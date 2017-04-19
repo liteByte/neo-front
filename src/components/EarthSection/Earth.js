@@ -9,7 +9,7 @@ export default class Earth extends Component {
   render() {
     return (
       <article {...this.props}>
-        <img src="assets/tierra_nubes.svg" alt="Earth" style={{imgStyle}}/>
+        <img src="/assets/tierra_nubes.svg" alt="Earth" style={{imgStyle}}/>
       </article>
     );
   }
