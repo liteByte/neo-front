@@ -48,6 +48,10 @@ const iconStyle = {
   top: 7,
 };
 
+const aStyle = {
+  textDecoration: 'none'
+};
+
 export default class AboutUs extends Component {
   render() {
     return (
@@ -68,8 +72,12 @@ export default class AboutUs extends Component {
             focused on delivering quality software.</p>
           <p>
             <span style={spanStyle}>Find us:</span>
-            <IconButton style={iconStyle} tooltip="Website"><WebIcon/></IconButton>
-            <IconButton style={iconStyle} tooltip="Github"><GithubIcon/></IconButton>
+            <a href="http://litebyte.us" target="_blank" style={aStyle}>
+              <IconButton style={iconStyle} tooltip="Website"><WebIcon/></IconButton>
+            </a>
+            <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
+              <IconButton style={iconStyle} tooltip="Github"><GithubIcon/></IconButton>
+            </a>
           </p>
         </div>
       </Dialog>
