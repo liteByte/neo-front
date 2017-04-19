@@ -27,14 +27,16 @@ export default class EarthSectionResponsive extends Component {
   render() {
     return (
       <section style={sectionStyle}>
-        <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
-        <IconButton style={iconStyle} onClick={() => this.props.setOpen(true)}>
-          <IconChevronRight/>
-        </IconButton>
         {this.props.detail ?
-          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo}/>
+          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo} class="big"/>
           :
-          <Space/>
+          <div style={{width: '100%', height: '100%'}}>
+            <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
+            <IconButton style={iconStyle} onClick={() => this.props.setOpen(true)}>
+              <IconChevronRight/>
+            </IconButton>
+            <Space/>
+          </div>
         }
       </section>
     );

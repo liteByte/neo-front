@@ -1,0 +1,19 @@
+@media (min-width: 1000px) {
+  .name-container {
+    .container {
+      .id {
+        margin-top: 10px;
+      }
+
+      .name {
+        height: 50px;
+        margin: 8px 0 0 0;
+        font-size: 2.5em;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+

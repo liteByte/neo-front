@@ -33,7 +33,7 @@ export default class DetailSection extends Component {
 
   render() {
     return (
-      <div className="detail-container">
+      <div className={"detail-container " + this.props.class}>
         <Name data={this.getName()}/>
         <div className="row">
           <Size data={this.getSize()}/>
@@ -49,6 +49,7 @@ export default class DetailSection extends Component {
 }
 
 DetailSection.propTypes = {
+  class: React.PropTypes.string.isRequired,
   selectNeo: React.PropTypes.func.isRequired,
   neo: React.PropTypes.object.isRequired,
 };

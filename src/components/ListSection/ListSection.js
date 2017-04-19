@@ -27,7 +27,7 @@ export default class ListSection extends Component {
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
         {this.props.detail ?
-          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo}/>
+          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo} class="small"/>
           :
           <div style={listContainerStyle}>
             <List neos={this.props.neos} selectNeo={this.props.selectNeo}/>

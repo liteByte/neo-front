@@ -9,10 +9,6 @@
     width: 100%;
     height: 83px;
     float: left;
-
-    @media (min-width: 1200px) {
-      height: 6.5vw;
-    }
   }
 
   .description {
@@ -22,8 +18,16 @@
     font-family: Dosis, sans-serif;
     font-weight: bold;
     font-size: 1.3em;
+  }
+}
 
-    @media (min-width: 1200px) {
+@media (min-width: 1200px) {
+  .assessment-container {
+    .image {
+      height: 6.5vw;
+    }
+
+    .description {
       font-size: 1.75vw;
     }
   }

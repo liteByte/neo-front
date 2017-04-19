@@ -1,0 +1,55 @@
+@media (min-width: 500px) {
+  .velocity-container {
+    .row {
+      .image {
+        display: block;
+      }
+
+      .number-container {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .velocity-container {
+    .row {
+      height: 11vw;
+
+      .number-container {
+        .number-title {
+          font-size: 2vw;
+        }
+
+        .number-number {
+          font-size: 7vw;
+
+          .unit {
+            font-size: 5vw;
+          }
+        }
+      }
+    }
+
+    .miss-title {
+      font-size: 2vw;
+      margin-top: 25px;
+    }
+
+    .miss-number {
+      font-size: 3vw;
+    }
+  }
+}
+
+@media (min-width: 662px) {
+  .velocity-container {
+    .miss-small {
+      display: none;
+    }
+    .miss-big {
+      display: block;
+    }
+  }
+}

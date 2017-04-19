@@ -1,0 +1,16 @@
+@media (min-width: 500px) {
+  .size-container {
+    width: 55%;
+  }
+}
+
+@media (min-width: 600px) {
+  .size-container {
+    .size {
+      font-size: 10vw;
+    }
+    .error {
+      font-size: 4vw;
+    }
+  }
+}

@@ -5,25 +5,30 @@
   float: left;
   text-align: center;
 
-  @media (min-width: 1000px) {
-    width: 55%;
-  }
-
   .size {
     font-size: 3.5em;
     font-weight: bold;
     font-family: Dosis, sans-serif;
     line-height: 1em;
-
-    @media (min-width: 1200px) {
-      font-size: 5vw;
-    }
   }
 
   .error {
     font-size: 1.3em;
+  }
+}
 
-    @media (min-width: 1200px) {
+@media (min-width: 1000px) {
+  .size-container {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .size-container {
+    .size {
+      font-size: 5vw;
+    }
+    .error {
       font-size: 2vw;
     }
   }

@@ -1,6 +1,7 @@
-@import "./components/DetailSection/_detailSection.scss";
+@import "./components/DetailSection/scss/_detailSection.scss";
 
 body {
+  min-width: 300px;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;

@@ -1,0 +1,84 @@
+@import "name";
+@import "size";
+@import "_comparison.scss";
+@import "velocity";
+@import "_assessment.scss";
+
+.detail-container {
+  height: calc(100% - 58px);
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: rgba(10, 10, 10, 0.65098);
+
+  > .row {
+    display: inline-block;
+    width: 100%;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.detail-container.small {
+  @import "name-small";
+  @import "size-small";
+  @import "comparison-small";
+  @import "velocity-small";
+  @import "assessment-small";
+
+  @media (min-width: 1200px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 1000px) {
+    > .row {
+      &:nth-child(2) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 999px) {
+    > .row {
+      &:last-child {
+        max-width: 350px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.detail-container.big {
+  @import "name-big";
+  @import "size-big";
+  @import "comparison-big";
+  @import "velocity-big";
+  @import "assessment-big";
+
+  @media (min-width: 600px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 500px) {
+    > .row {
+      &:nth-child(2) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 499px) {
+    > .row {
+      &:last-child {
+        max-width: 350px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

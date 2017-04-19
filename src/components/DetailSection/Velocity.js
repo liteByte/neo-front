@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import MediaQuery from "react-responsive";
 import InfoButton from "../InfoButton";
 
 export default class Velocity extends Component {
@@ -34,20 +33,16 @@ export default class Velocity extends Component {
             <div className="number-number">{this.state.velocity}<span className="unit">km/h</span></div>
           </div>
         </div>
-        <MediaQuery minWidth={1325}>
-          {matches => {
-            return matches ?
-              <div className="miss-title">MISS DISTANCE
-                <span className="miss-number"> {this.state.missDistance}km</span>
-                <InfoButton/>
-              </div>
-              :
-              <div>
-                <div className="miss-title">MISS DISTANCE<InfoButton size={24}/></div>
-                <div className="miss-number">{this.state.missDistance}km</div>
-              </div>
-          }}
-        </MediaQuery>
+        <div className="miss-small">
+          <div className="miss-title">MISS DISTANCE<InfoButton size={24}/></div>
+          <div className="miss-number">{this.state.missDistance}km</div>
+        </div>
+        <div className="miss-big">
+          <div className="miss-title">MISS DISTANCE
+            <span className="miss-number"> {this.state.missDistance}km</span>
+            <InfoButton/>
+          </div>
+        </div>
       </div>
     );
   }

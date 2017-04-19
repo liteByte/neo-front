@@ -1,0 +1,24 @@
+@media (min-width: 1000px) {
+  .comparison-container {
+    width: 45%;
+    max-width: none;
+    left: 0;
+    transform: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comparison-container {
+    .row {
+      height: 5.5vw;
+
+      .number-container {
+        font-size: 3vw;
+      }
+    }
+
+    .description {
+      font-size: 1.25vw;
+    }
+  }
+}
