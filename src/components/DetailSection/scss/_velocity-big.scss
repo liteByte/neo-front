@@ -1,5 +1,13 @@
+@media (min-width: 400px) {
+  .velocity-container {
+    width: 55%;
+  }
+}
+
 @media (min-width: 500px) {
   .velocity-container {
+    width: 55%;
+
     .row {
       .image {
         display: block;
