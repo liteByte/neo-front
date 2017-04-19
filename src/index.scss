@@ -1,4 +1,6 @@
-@import "./components/DetailSection/scss/_detailSection.scss";
+@import "./components/DetailSection/scss/detailSection";
+@import "./components/EarthSection/earthSection";
+@import "./components/ListSection/listSection";
 
 body {
   min-width: 300px;

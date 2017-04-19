@@ -1,12 +1,14 @@
 import React, {Component} from "react";
+import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 import InfoButton from "../InfoButton";
 import List from "./List";
 import DetailSection from "../DetailSection/DetailSection";
 
 const sectionStyle = {
   width: 'calc(50% - 10px)',
-  float: 'left',
   height: '100%',
+  float: 'left',
+  position: 'relative',
 };
 
 const titleStyle = {
@@ -16,9 +18,13 @@ const titleStyle = {
 };
 
 const listContainerStyle = {
+  width: '100%',
   display: 'flex',
+  position: 'absolute',
+  top: 55,
   flexWrap: 'wrap',
   justifyContent: 'space-around',
+  willChange: 'transform',
 };
 
 export default class ListSection extends Component {
@@ -26,13 +32,19 @@ export default class ListSection extends Component {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Near Earth Objects<InfoButton/></h2>
-        {this.props.detail ?
-          <DetailSection selectNeo={this.props.selectNeo} neo={this.props.neo} class="small"/>
-          :
-          <div style={listContainerStyle}>
-            <List neos={this.props.neos} selectNeo={this.props.selectNeo}/>
-          </div>
-        }
+        <CSSTransitionGroup
+          transitionName="detail-transition"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={150}
+        >
+          {this.props.detail ?
+            <DetailSection key={0} selectNeo={this.props.selectNeo} neo={this.props.neo} class="small"/>
+            :
+            <div key={1} style={listContainerStyle}>
+              <List neos={this.props.neos} selectNeo={this.props.selectNeo}/>
+            </div>
+          }
+        </CSSTransitionGroup>
       </section>
     );
   }
