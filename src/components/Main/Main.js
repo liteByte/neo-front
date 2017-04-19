@@ -10,7 +10,8 @@ const style = {
   padding: '75px 25px',
   boxSizing: 'border-box',
   overflow: 'auto',
-  color: '#fff'
+  color: '#fff',
+  background: "url('/assets/fondo_estrellas.svg') 50% 50% / cover",
 };
 
 export default class Main extends Component {
