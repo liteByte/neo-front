@@ -13,10 +13,12 @@ export default class SpaceObject extends Component {
     const ratio = 500 / (width < height ? width : height);
 
     const style = {
-      width: 100 / ratio,
-      height: 100 / ratio,
+      width: props.size / ratio,
+      height: props.size / ratio,
       position: 'absolute',
-      transform: 'translate(-50%, -50%)'
+      transform: 'translate(-50%, -50%)',
+      left: `calc(50% + ${props.position.x / 2}%)`,
+      top: `calc(50% + ${props.position.y / 2}%)`,
     };
 
     this.state = {
@@ -44,4 +46,6 @@ export default class SpaceObject extends Component {
 SpaceObject.propTypes = {
   style: React.PropTypes.object,
   dimensions: React.PropTypes.object.isRequired,
+  position: React.PropTypes.object.isRequired,
+  size: React.PropTypes.number.isRequired,
 };
