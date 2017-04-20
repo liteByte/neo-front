@@ -18,10 +18,12 @@ export default class EarthSection extends Component {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Earth</h2>
-        <Space/>
+        <Space neos={this.props.neos}/>
       </section>
     );
   }
 }
 
-EarthSection.propTypes = {};
+EarthSection.propTypes = {
+  neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+};

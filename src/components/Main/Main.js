@@ -28,7 +28,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 40505.109238,
-        missDistance: 30.8768123,
+        missDistance: 4024547.75,
       },
       isDangerous: false,
     },
@@ -43,7 +43,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 11896187,
       },
       isDangerous: false,
     },
@@ -58,7 +58,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 45290628,
       },
       isDangerous: false,
     },
@@ -73,7 +73,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 51762692,
       },
       isDangerous: true,
     },
@@ -88,7 +88,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 38764432,
       },
       isDangerous: true,
     },
@@ -103,7 +103,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 73463952,
       },
       isDangerous: false,
     },
@@ -118,7 +118,7 @@ export default class Main extends Component {
       },
       approach: {
         velocity: 50505.109238,
-        missDistance: 36433752.8768123,
+        missDistance: 8084571,
       },
       isDangerous: false,
     }
@@ -136,21 +136,36 @@ export default class Main extends Component {
     const neos = this.neos;
     let biggest = 0;
     let smallest = 0;
+    let closest = 0;
+    let farthest = 0;
     for (let i = 0; i < neos.length; i++) {
       const neo = neos[i];
+
       const size = (neo.size.min + neo.size.max) / 2;
       if (size > biggest) biggest = size;
       if (size < smallest || i === 0) smallest = size;
       neo.size.avg = size;
+
+      const missDistance = neo.approach.missDistance;
+      if (missDistance > farthest) farthest = missDistance;
+      if (missDistance < closest || i === 0) closest = missDistance
     }
 
     const minDisplaySize = .1;
+    const minDisplayDistance = .3;
     for (let i = 0; i < neos.length; i++) {
       const neo = neos[i];
+
       let size = biggest > 0 ? neo.size.avg / biggest : 1;
       if (size < minDisplaySize) size = minDisplaySize;
+
+      let distance = farthest > 0 ? neo.approach.missDistance / farthest : 1;
+      if (distance < minDisplayDistance) distance = minDisplayDistance;
+
       neo.display = {
-        size: size
+        size: size,
+        distance: distance,
+        angle: Math.random() * 360,
       };
     }
 
@@ -199,10 +214,11 @@ export default class Main extends Component {
         <MediaQuery minWidth={750}>
           {matches => {
             return matches ?
-              <EarthSection/>
+              <EarthSection neos={this.neos}/>
               :
               <EarthSectionResponsive
                 setOpen={this.setDrawerOpen}
+                neos={this.neos}
                 detail={this.state.detail}
                 neo={this.state.neo}
                 selectNeo={this.selectNeo}

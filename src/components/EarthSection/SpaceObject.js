@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Neo from "./Neo";
 
 export default class SpaceObject extends Component {
 
@@ -8,18 +9,19 @@ export default class SpaceObject extends Component {
   }
 
   updateState = (props) => {
+    const neo = props.data.display;
     const width = props.dimensions.width;
     const height = props.dimensions.height;
     const dimension = width < height ? width : height;
-    const ratio = 500 / dimension;
+    const ratio = dimension * .1;
 
     const style = {
-      width: props.size / ratio,
-      height: props.size / ratio,
+      width: neo.size * ratio,
+      height: neo.size * ratio,
       position: 'absolute',
       transform: 'translate(-50%, -50%)',
-      left: .5 * width + Math.cos(toRadians(props.angle)) * props.distance / 2 / 100 * dimension,
-      top: .5 * height - Math.sin(toRadians(props.angle)) * props.distance / 2 / 100 * dimension,
+      left: .5 * width + Math.cos(toRadians(neo.angle)) * neo.distance / 2 * dimension,
+      top: .5 * height - Math.sin(toRadians(neo.angle)) * neo.distance / 2 * dimension,
     };
 
     this.state = {
@@ -41,7 +43,11 @@ export default class SpaceObject extends Component {
   render() {
     return (
       <article style={this.state.style}>
-        {this.props.children}
+        {this.props.children ?
+          this.props.children
+          :
+          <Neo data={this.props.data}/>
+        }
       </article>
     );
   }
@@ -51,7 +57,5 @@ export default class SpaceObject extends Component {
 SpaceObject.propTypes = {
   style: React.PropTypes.object,
   dimensions: React.PropTypes.object.isRequired,
-  angle: React.PropTypes.number.isRequired,
-  distance: React.PropTypes.number.isRequired,
-  size: React.PropTypes.number.isRequired,
+  data: React.PropTypes.object.isRequired,
 };
