@@ -7,14 +7,14 @@ const containerStyle = {
 };
 
 const overlayStyle = {
-  backgroundColor: "rgba(0, 0, 0, .15)"
+  backgroundColor: "rgba(0, 0, 0, .15)",
 };
 
 const listContainerStyle = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'space-around',
-  padding: '60px 10px 10px 10px'
+  padding: '60px 10px 10px 10px',
 };
 
 export default class ListSectionResponsive extends Component {

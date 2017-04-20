@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import Earth from "./Earth";
+import Measure from "react-measure";
+import SpaceObject from "./SpaceObject";
 
 const spaceStyle = {
   width: '100%',
@@ -7,21 +8,18 @@ const spaceStyle = {
   position: 'relative',
 };
 
-const earthStyle = {
-  width: '25%',
-  height: '25%',
-  position: 'absolute',
-  left: '50%',
-  top: '50%',
-  transform: 'translate(-50%, -50%)'
-};
-
 export default class EarthSection extends Component {
   render() {
     return (
-      <div style={spaceStyle}>
-        <Earth style={earthStyle}/>
-      </div>
+      <Measure>
+        { dimensions =>
+          <div style={spaceStyle}>
+            <SpaceObject dimensions={dimensions} style={{left: '50%', top: '50%'}}>
+              <img src="/assets/tierra_nubes.svg" alt="Earth" style={{maxWidth: '100%', maxHeight: '100%'}}/>
+            </SpaceObject>
+          </div>
+        }
+      </Measure>
     );
   }
 }
