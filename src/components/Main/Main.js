@@ -135,20 +135,16 @@ export default class Main extends Component {
 
     const neos = this.neos;
     let biggest = 0;
-    let smallest = 0;
-    let closest = 0;
     let farthest = 0;
     for (let i = 0; i < neos.length; i++) {
       const neo = neos[i];
 
       const size = (neo.size.min + neo.size.max) / 2;
       if (size > biggest) biggest = size;
-      if (size < smallest || i === 0) smallest = size;
       neo.size.avg = size;
 
       const missDistance = neo.approach.missDistance;
       if (missDistance > farthest) farthest = missDistance;
-      if (missDistance < closest || i === 0) closest = missDistance
     }
 
     const minDisplaySize = .1;
