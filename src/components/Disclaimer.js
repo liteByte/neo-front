@@ -16,7 +16,7 @@ export default class Disclaimer extends Component {
         <InfoButton
           color="#c7c7c7"
           title="Disclaimer"
-          description="NEOs don't really look like little planets and the drawings are not to scale. That being said, all the numbers are correct."
+          description="NEOs don't really look like little planets and the drawings are not to scale. But it's way prettier this way."
         />
       </div>
     )
