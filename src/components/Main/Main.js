@@ -210,7 +210,7 @@ export default class Main extends Component {
         <MediaQuery minWidth={750}>
           {matches => {
             return matches ?
-              <EarthSection neos={this.neos}/>
+              <EarthSection neos={this.neos} selectNeo={this.selectNeo}/>
               :
               <EarthSectionResponsive
                 setOpen={this.setDrawerOpen}

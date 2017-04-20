@@ -46,7 +46,7 @@ export default class SpaceObject extends Component {
         {this.props.children ?
           this.props.children
           :
-          <Neo data={this.props.data}/>
+          <Neo data={this.props.data} selectNeo={this.props.selectNeo}/>
         }
       </article>
     );
@@ -58,4 +58,5 @@ SpaceObject.propTypes = {
   style: React.PropTypes.object,
   dimensions: React.PropTypes.object.isRequired,
   data: React.PropTypes.object.isRequired,
+  selectNeo: React.PropTypes.func,
 };

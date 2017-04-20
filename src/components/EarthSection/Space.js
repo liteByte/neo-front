@@ -18,7 +18,7 @@ export default class EarthSection extends Component {
               <img src="/assets/tierra_nubes.svg" alt="Earth" style={{maxWidth: '100%', maxHeight: '100%'}}/>
             </SpaceObject>
             {this.props.neos.map((neo, index) =>
-              <SpaceObject key={index} dimensions={dimensions} data={neo} />
+              <SpaceObject key={index} dimensions={dimensions} data={neo} selectNeo={this.props.selectNeo}/>
             )}
           </div>
         }
@@ -29,4 +29,5 @@ export default class EarthSection extends Component {
 
 EarthSection.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  selectNeo: React.PropTypes.func.isRequired,
 };

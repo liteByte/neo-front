@@ -46,7 +46,7 @@ export default class EarthSectionResponsive extends Component {
               <IconButton style={iconStyle} onClick={() => this.props.setOpen(true)}>
                 <IconChevronRight/>
               </IconButton>
-              <Space neos={this.props.neos}/>
+              <Space neos={this.props.neos} selectNeo={this.props.selectNeo}/>
             </div>
           }
         </CSSTransitionGroup>
