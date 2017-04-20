@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"
+	 xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="135.702px"
+	 height="368.09px" viewBox="0 0 135.702 368.09" enable-background="new 0 0 135.702 368.09" xml:space="preserve">
+	<g>
+		<path fill="#A47768" d="M61.142,222.045l-14.81,92.45c-3.255,21.302-11.081,40.111-26.647,53.595H0
+			c15.566-13.483,26.395-32.293,29.648-53.595l14.809-92.45H61.142z"/>
+		<path fill="#A47768" d="M91.245,222.044l14.81,92.451c3.254,21.302,14.082,40.111,29.648,53.595h-19.686
+			c-15.566-13.483-23.393-32.293-26.647-53.595l-14.81-92.451H91.245z"/>
+		<g>
+			<polygon fill="#A47768" points="83.173,222.044 70.987,57 64.715,57 52.529,222.044 				"/>
+		</g>
+		<rect x="16.685" y="296.432" fill="#C69580" width="102.332" height="10.902"/>
+		<rect x="33.925" y="222.045" fill="#C69580" width="67.852" height="10.902"/>
+		<rect x="58.623" y="41" fill="#805A5A" width="18.457" height="28.5"/>
+		<polygon fill="#C69580" points="69.458,0 70.987,41 64.715,41 66.246,0 			"/>
+		<polygon fill="#805A5A" points="69.458,145 72.987,222.045 62.715,222.045 66.246,145 			"/>
+		<path fill="#C69580" d="M89.187,313.358l0.183,1.137c2.025,13.256,5.821,25.547,12.151,36.189l-0.193-0.015
+			c-6.574-11.698-19.103-19.601-33.477-19.601s-26.902,7.902-33.477,19.601l-0.193,0.015c6.33-10.643,10.126-22.934,12.151-36.189
+			l0.183-1.137H89.187z"/>
+		<rect x="16.685" y="307.334" fill="#805A5A" width="102.332" height="10.902"/>
+		<rect x="33.925" y="232.947" fill="#805A5A" width="67.852" height="10.902"/>
+		<rect x="54.708" y="59" fill="#C69580" width="26.287" height="10.902"/>
+	</g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Layer_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="312.528px"
+	 height="139.477px" viewBox="0 0 312.528 139.477" enable-background="new 0 0 312.528 139.477" xml:space="preserve">
+	<g>
+		<g>
+			<defs>
+				<path id="SVGID_1_" d="M214.16,0c32.587,0,59.003,26.416,59.003,59.003v48.804h0.01h23.521c8.744,0,15.834,7.09,15.834,15.834
+					v15.836h-33.264c-8.744,0-15.834-7.09-15.834-15.836c0,8.746-7.09,15.836-15.835,15.836h-33.263v-15.836
+					c0-8.744,7.089-15.834,15.834-15.834h23.51l-0.058-21.667c0-8.744-7.089-15.834-15.834-15.834H46.337
+					C20.746,70.306,0,49.562,0,23.971V9.959C0,4.459,4.46,0,9.96,0H214.16"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<path fill="#006ACA" d="M214.16,0c32.587,0,59.003,26.416,59.003,59.003v48.804h0.01h23.521c8.744,0,15.834,7.09,15.834,15.834
+					v15.836h-33.264c-8.744,0-15.834-7.09-15.834-15.836c0,8.746-7.09,15.836-15.835,15.836h-33.263v-15.836
+					c0-8.744,7.089-15.834,15.834-15.834h23.51l-0.058-21.667c0-8.744-7.089-15.834-15.834-15.834H46.337
+					C20.746,70.306,0,49.562,0,23.971V9.959C0,4.459,4.46,0,9.96,0H214.16"/>
+				<path fill="#BAC8CF" d="M218.982,70.308c-1.198-7.559-7.743-13.336-15.638-13.336h-87.71c-14.755,0-27.563-8.326-33.985-20.536
+					l0.083,0.156C75.29,24.448,62.517,16.176,47.811,16.176H0h-10.183v68.298h229.165V70.308z"/>
+			</g>
+		</g>
+		<circle fill="#BAC8CF" cx="89.457" cy="16.928" r="5.451"/>
+		<path fill="#006ACA" d="M159.606,55.972c8.744,0,15.834,7.09,15.834,15.834v15.836h-33.264c-8.744,0-15.834-7.09-15.834-15.836
+			V55.972H159.606z"/>
+	</g>
+</svg>

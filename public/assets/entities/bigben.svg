@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="62.627px"
+	 height="354.89px" viewBox="0 0 62.627 354.89" enable-background="new 0 0 62.627 354.89" xml:space="preserve">
+	<g>
+		<rect x="0.001" y="140.812" fill="#805A5A" width="62.626" height="214.065"/>
+		<rect x="3.697" y="123.307" fill="#C69580" width="55.235" height="17.505"/>
+		<polygon fill="#606466" points="47.261,92.189 15.367,92.189 3.697,123.307 58.933,123.307 			"/>
+		<rect x="15.367" y="67.295" fill="#C69580" width="31.312" height="24.895"/>
+		<polygon fill="#606466" points="31.022,0 15.367,67.295 46.679,67.295 			"/>
+		<rect y="207.101" fill="#A47768" width="8.948" height="147.789"/>
+		<rect x="53.682" y="207.101" fill="#A47768" width="8.945" height="147.789"/>
+		<circle fill="#BAC8CF" cx="31.314" cy="170.176" r="21.686"/>
+		<rect x="0.001" y="247.005" fill="#C69580" width="62.626" height="8.945"/>
+		<rect x="0.001" y="198.154" fill="#C69580" width="62.626" height="8.945"/>
+		<rect x="0.001" y="291.607" fill="#C69580" width="62.626" height="8.947"/>
+		<g>
+			<polygon fill="#333333" points="46.679,173.32 30.022,173.32 30.022,159.87 32.022,159.87 32.022,171.32 46.679,171.32 				"/>
+		</g>
+	</g>
+</svg>
