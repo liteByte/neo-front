@@ -8,7 +8,9 @@ export default class SpaceObject extends Component {
   }
 
   updateState = (props) => {
-    const ratio = 500 / props.dimensions.width;
+    const width = props.dimensions.width;
+    const height = props.dimensions.height;
+    const ratio = 500 / (width < height ? width : height);
 
     const style = {
       width: 100 / ratio,
