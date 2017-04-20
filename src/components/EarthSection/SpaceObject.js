@@ -10,15 +10,16 @@ export default class SpaceObject extends Component {
   updateState = (props) => {
     const width = props.dimensions.width;
     const height = props.dimensions.height;
-    const ratio = 500 / (width < height ? width : height);
+    const dimension = width < height ? width : height;
+    const ratio = 500 / dimension;
 
     const style = {
       width: props.size / ratio,
       height: props.size / ratio,
       position: 'absolute',
       transform: 'translate(-50%, -50%)',
-      left: `calc(50% + ${props.position.x / 2}%)`,
-      top: `calc(50% + ${props.position.y / 2}%)`,
+      left: .5 * width + Math.cos(toRadians(props.angle)) * props.distance / 2 / 100 * dimension,
+      top: .5 * height - Math.sin(toRadians(props.angle)) * props.distance / 2 / 100 * dimension,
     };
 
     this.state = {
@@ -26,6 +27,10 @@ export default class SpaceObject extends Component {
         ...style,
         ...props.style,
       }
+    };
+
+    function toRadians(a) {
+      return (Math.PI / 180) * a;
     }
   };
 
@@ -46,6 +51,7 @@ export default class SpaceObject extends Component {
 SpaceObject.propTypes = {
   style: React.PropTypes.object,
   dimensions: React.PropTypes.object.isRequired,
-  position: React.PropTypes.object.isRequired,
+  angle: React.PropTypes.number.isRequired,
+  distance: React.PropTypes.number.isRequired,
   size: React.PropTypes.number.isRequired,
 };

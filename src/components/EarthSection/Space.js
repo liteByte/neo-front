@@ -14,7 +14,7 @@ export default class EarthSection extends Component {
       <Measure>
         { dimensions =>
           <div style={spaceStyle}>
-            <SpaceObject dimensions={dimensions} position={{x: 0, y: 0}} size={100}>
+            <SpaceObject dimensions={dimensions} angle={0} distance={0} size={100}>
               <img src="/assets/tierra_nubes.svg" alt="Earth" style={{maxWidth: '100%', maxHeight: '100%'}}/>
             </SpaceObject>
           </div>
