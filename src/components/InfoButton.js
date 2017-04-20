@@ -12,11 +12,23 @@ const paperStyle = {
   color: '#000',
 };
 
+const style = {
+  padding: 0,
+  top: 5,
+  left: 5,
+  position: 'relative',
+  cursor: 'help',
+};
+
 const titleStyle = {
   marginTop: 0,
 };
 
 export default class InfoButton extends Component {
+
+  iconStyle = {
+    color: this.props.color || '#fff',
+  };
 
   constructor(props) {
     super(props);
@@ -25,16 +37,6 @@ export default class InfoButton extends Component {
       open: false,
     };
   }
-
-  iconStyle = {
-    width: this.props.size || 32,
-    height: this.props.size || 32,
-    padding: 0,
-    top: 5,
-    left: 5,
-    position: 'relative',
-    cursor: 'help'
-  };
 
   handleTouchTap = (event) => {
     event.preventDefault();
@@ -54,7 +56,8 @@ export default class InfoButton extends Component {
   render() {
     return (
       <IconButton
-        style={this.iconStyle}
+        style={style}
+        iconStyle={this.iconStyle}
         onTouchTap={this.handleTouchTap}
       >
         <IconInfo/>
@@ -76,7 +79,7 @@ export default class InfoButton extends Component {
 }
 
 InfoButton.propTypes = {
-  size: React.PropTypes.number,
+  color: React.PropTypes.string,
   title: React.PropTypes.string,
   description: React.PropTypes.string,
 };

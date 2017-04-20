@@ -8,8 +8,8 @@ import Space from "./Space";
 
 const sectionStyle = {
   width: '100%',
-  float: 'left',
   height: '100%',
+  float: 'left',
 };
 
 const titleStyle = {

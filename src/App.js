@@ -4,6 +4,7 @@ import MediaQuery from "react-responsive";
 import theme from "./components/theme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
+import Disclaimer from "./components/Disclaimer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
@@ -18,6 +19,7 @@ class App extends Component {
           <Header/>
           <Main/>
           <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
+          <Disclaimer/>
         </div>
       </MuiThemeProvider>
     );

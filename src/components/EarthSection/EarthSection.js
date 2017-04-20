@@ -3,8 +3,8 @@ import Space from "./Space";
 
 const sectionStyle = {
   width: 'calc(50% - 10px)',
-  float: 'right',
   height: '100%',
+  float: 'right',
 };
 
 const titleStyle = {
