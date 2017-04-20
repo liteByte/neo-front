@@ -15,3 +15,12 @@
   opacity: 0.01;
   transition: opacity 150ms ease-in;
 }
+
+.space {
+  height: calc(100% - 30px);
+  top: -30px;
+
+  @media (min-width: 500px) and (min-height: 400px) {
+    height: calc(100% - 60px);
+  }
+}
