@@ -4,7 +4,7 @@ import InfoButton from "./InfoButton";
 const disclaimerStyle = {
   position: 'fixed',
   right: 10,
-  bottom: 5,
+  bottom: 13,
   color: '#c7c7c7',
   zIndex: 3000,
 };

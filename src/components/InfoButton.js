@@ -13,6 +13,8 @@ const paperStyle = {
 };
 
 const style = {
+  width: 32,
+  height: 32,
   padding: 0,
   top: 5,
   left: 5,
