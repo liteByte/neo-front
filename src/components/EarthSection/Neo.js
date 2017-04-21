@@ -145,8 +145,8 @@ export default class Neo extends Component {
             xmlns="http://www.w3.org/2000/svg"
             width={'100%'} height={'100%'}
             viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-            {this.getBase(this.getColor(this.state.color))}
-            {this.getTerrain(this.state.terrain)}
+            {this.getBase(this.getColor(this.state.display.color))}
+            {this.getTerrain(this.state.display.terrain)}
           </svg>
         </SvgIcon>
       </IconButton>

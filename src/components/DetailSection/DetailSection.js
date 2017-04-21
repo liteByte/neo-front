@@ -31,7 +31,10 @@ export default class DetailSection extends Component {
 
   getVelocity = () => {
     const neo = this.props.neo;
-    return neo.approach;
+    return {
+      velocity: neo.velocity,
+      missDistance: neo.missDistance,
+    };
   };
 
   getAssessment = () => {

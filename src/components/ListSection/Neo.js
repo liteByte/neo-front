@@ -168,8 +168,8 @@ export default class Neo extends Component {
               x={this.getPosition()} y={this.getPosition()}
               width={this.getSize()} height={this.getSize()}
               viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-              {this.getBase(this.getColor(this.state.color))}
-              {this.getTerrain(this.state.terrain)}
+              {this.getBase(this.getColor(this.state.display.color))}
+              {this.getTerrain(this.state.display.terrain)}
             </svg>
           </SvgIcon>
         </IconButton>
