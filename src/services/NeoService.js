@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3001';
+const baseUrl = 'https://still-stream-48323.herokuapp.com';
 
 class NeoService {
 
