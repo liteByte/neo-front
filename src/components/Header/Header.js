@@ -61,7 +61,9 @@ export default class Header extends Component {
     return (
       <header style={headerStyle}>
         <div style={divLeftStyle}>
-          <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
+          <a href="http://litebyte.us" target="_blank" style={aStyle}>
+            <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
+          </a>
         </div>
         <div style={divRightStyle}>
           <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
