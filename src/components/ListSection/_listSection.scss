@@ -15,3 +15,11 @@
   opacity: 0.01;
   transition: opacity 150ms ease-in;
 }
+
+.neo-transition-appear {
+  opacity: 0.01;
+}
+
+.neo-transition-appear.example-appear-active {
+  opacity: 1;
+}

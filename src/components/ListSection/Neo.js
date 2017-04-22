@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 import IconButton from "material-ui/IconButton";
 import SvgIcon from "material-ui/SvgIcon";
 
@@ -6,6 +7,7 @@ const tileStyle = {
   height: '100%',
   padding: 1,
   boxSizing: 'border-box',
+  transition: 'opacity 100ms ease-in',
 };
 
 const buttonStyle = {
@@ -155,25 +157,33 @@ export default class Neo extends Component {
 
   render() {
     return (
-      <article style={this.getArticleStyle()}>
-        <IconButton
-          style={buttonStyle}
-          iconStyle={iconStyle}
-          onClick={() => this.props.selectNeo ? this.props.selectNeo(this.props.data) : null}
-        >
-          <SvgIcon viewBox="0 0 100 100">
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x={this.getPosition()} y={this.getPosition()}
-              width={this.getSize()} height={this.getSize()}
-              viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-              {this.getBase(this.getColor(this.state.display.color))}
-              {this.getTerrain(this.state.display.terrain)}
-            </svg>
-          </SvgIcon>
-        </IconButton>
-      </article>
+      <CSSTransitionGroup
+        transitionName="neo-transition"
+        transitionAppear={window.firstLoad}
+        transitionAppearTimeout={250}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <article style={this.getArticleStyle()}>
+          <IconButton
+            style={buttonStyle}
+            iconStyle={iconStyle}
+            onClick={() => this.props.selectNeo ? this.props.selectNeo(this.props.data) : null}
+          >
+            <SvgIcon viewBox="0 0 100 100">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                x={this.getPosition()} y={this.getPosition()}
+                width={this.getSize()} height={this.getSize()}
+                viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
+                {this.getBase(this.getColor(this.state.display.color))}
+                {this.getTerrain(this.state.display.terrain)}
+              </svg>
+            </SvgIcon>
+          </IconButton>
+        </article>
+      </CSSTransitionGroup>
     );
   }
 }

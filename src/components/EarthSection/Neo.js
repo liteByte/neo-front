@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 import IconButton from "material-ui/IconButton";
 import SvgIcon from "material-ui/SvgIcon";
 
@@ -6,6 +7,7 @@ const buttonStyle = {
   width: '100%',
   height: '100%',
   padding: 1,
+  transition: 'opacity 100ms ease-in',
 };
 
 const iconStyle = {
@@ -134,22 +136,30 @@ export default class Neo extends Component {
 
   render() {
     return (
-      <IconButton
-        style={buttonStyle}
-        iconStyle={iconStyle}
-        onClick={() => this.props.selectNeo? this.props.selectNeo(this.props.data) : null}
+      <CSSTransitionGroup
+        transitionName="neo-transition"
+        transitionAppear={window.firstLoad}
+        transitionAppearTimeout={250}
+        transitionEnter={false}
+        transitionLeave={false}
       >
-        <SvgIcon viewBox="0 0 100 100">
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            width={'100%'} height={'100%'}
-            viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
-            {this.getBase(this.getColor(this.state.display.color))}
-            {this.getTerrain(this.state.display.terrain)}
-          </svg>
-        </SvgIcon>
-      </IconButton>
+        <IconButton
+          style={buttonStyle}
+          iconStyle={iconStyle}
+          onClick={() => this.props.selectNeo ? this.props.selectNeo(this.props.data) : null}
+        >
+          <SvgIcon viewBox="0 0 100 100">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width={'100%'} height={'100%'}
+              viewBox="0 0 200 200" enableBackground="new 0 0 200 200">
+              {this.getBase(this.getColor(this.state.display.color))}
+              {this.getTerrain(this.state.display.terrain)}
+            </svg>
+          </SvgIcon>
+        </IconButton>
+      </CSSTransitionGroup>
     );
   }
 }

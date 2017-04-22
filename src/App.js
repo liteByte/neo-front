@@ -12,6 +12,8 @@ import Footer from "./components/Footer/Footer";
 
 injectTapEventPlugin();
 
+window.firstLoad = true;
+
 class App extends Component {
 
   constructor(props) {

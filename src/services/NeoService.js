@@ -26,6 +26,11 @@ class NeoService {
       .then(data => {
         this.neos = data;
         this.processNeos();
+
+        setTimeout(() => {
+          window.firstLoad = false;
+        }, 500);
+
         return Promise.resolve(this.neos);
       })
       .catch(err => {
