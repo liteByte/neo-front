@@ -19,11 +19,14 @@ export default class List extends Component {
   render() {
     return (
       <GridList cellHeight={cellSize} cols={0} style={this.getStyle()}>
-        {this.props.neos.map((neo, index) => (
-          <GridTile key={index}>
-            <Neo data={neo} cellSize={cellSize} selectNeo={this.props.selectNeo}/>
-          </GridTile>
-        ))}
+        {this.props.neos.length === 0 ?
+          <p>Looking for NEOs...</p>
+          :
+          this.props.neos.map((neo, index) => (
+            <GridTile key={index}>
+              <Neo data={neo} cellSize={cellSize} selectNeo={this.props.selectNeo}/>
+            </GridTile>
+          ))}
       </GridList>
     );
   }
