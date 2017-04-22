@@ -4,6 +4,10 @@ import Neo from "./Neo";
 
 const cellSize = 100;
 
+const pStyle = {
+  marginLeft: 10,
+};
+
 export default class List extends Component {
 
   getStyle = () => {
@@ -20,7 +24,7 @@ export default class List extends Component {
     return (
       <GridList cellHeight={cellSize} cols={0} style={this.getStyle()}>
         {this.props.neos.length === 0 ?
-          <p>Looking for NEOs...</p>
+          <p style={pStyle}>Looking for NEOs...</p>
           :
           this.props.neos.map((neo, index) => (
             <GridTile key={index}>
