@@ -18,7 +18,7 @@ export default class EarthSection extends Component {
     return (
       <section style={sectionStyle}>
         <h2 style={titleStyle}>Earth</h2>
-        <Space neos={this.props.neos} selectNeo={this.props.selectNeo}/>
+        <Space neos={this.props.neos} selectNeo={this.props.selectNeo} setAboutOpen={this.props.setAboutOpen}/>
       </section>
     );
   }
@@ -27,4 +27,5 @@ export default class EarthSection extends Component {
 EarthSection.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   selectNeo: React.PropTypes.func.isRequired,
+  setAboutOpen: React.PropTypes.func.isRequired,
 };

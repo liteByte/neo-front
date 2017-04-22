@@ -14,7 +14,7 @@ const iconStyle = {
   position: 'relative',
 };
 
-export default class Neo extends Component {
+export default class Earth extends Component {
 
   constructor(props) {
     super(props);
@@ -44,7 +44,7 @@ export default class Neo extends Component {
           <IconButton
             style={buttonStyle}
             iconStyle={this.getIconStyle(dimensions)}
-            onClick={() => {}}
+            onClick={() => this.props.setAboutOpen(true)}
           >
             <img src="/assets/tierra_nubes.svg" alt="Earth"/>
           </IconButton>
@@ -54,4 +54,6 @@ export default class Neo extends Component {
   }
 }
 
-Neo.propTypes = {};
+Earth.propTypes = {
+  setAboutOpen: React.PropTypes.func.isRequired,
+};

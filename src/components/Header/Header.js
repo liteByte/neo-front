@@ -5,8 +5,6 @@ import MenuItem from "material-ui/MenuItem";
 import IconMoreVert from "material-ui/svg-icons/navigation/more-vert";
 import IconButton from "material-ui/IconButton";
 import Popover from "../Popover";
-import AboutUs from "../AboutUs/AboutUs";
-
 
 const headerStyle = {
   width: '100%',
@@ -59,32 +57,16 @@ const aStyle = {
 };
 
 export default class Header extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      aboutUs: false
-    };
-  }
-
-  setAboutOpen = (open) => {
-    this.setState({
-      aboutUs: open
-    });
-  };
-
   render() {
     return (
       <header style={headerStyle}>
-        <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
         <div style={divLeftStyle}>
           <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
         </div>
         <div style={divRightStyle}>
           <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
             <div style={buttonStyle}>
-              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.setAboutOpen(true)}/>
+              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.setAboutOpen(true)}/>
             </div>
             <div style={buttonStyle}>
               <a href="https://github.com/liteByte/neo-front" target="_blank">
@@ -94,7 +76,7 @@ export default class Header extends Component {
           </MediaQuery>
           <MediaQuery maxWidth={599} component="div" style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
-              <MenuItem primaryText="About Us" onClick={() => this.setAboutOpen(true)}/>
+              <MenuItem primaryText="About Us" onClick={() => this.props.setAboutOpen(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
@@ -105,3 +87,7 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  setAboutOpen: React.PropTypes.func.isRequired,
+};

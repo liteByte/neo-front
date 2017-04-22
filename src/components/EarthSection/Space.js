@@ -23,7 +23,7 @@ export default class Space extends Component {
         { dimensions =>
           <div style={spaceStyle} className="space">
             <SpaceObject dimensions={dimensions} data={earthData}>
-              <Earth/>
+              <Earth setAboutOpen={this.props.setAboutOpen}/>
             </SpaceObject>
             {this.props.neos.map((neo, index) =>
               <SpaceObject key={index} dimensions={dimensions} data={neo} selectNeo={this.props.selectNeo}/>
@@ -38,4 +38,5 @@ export default class Space extends Component {
 Space.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   selectNeo: React.PropTypes.func.isRequired,
+  setAboutOpen: React.PropTypes.func.isRequired,
 };

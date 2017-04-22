@@ -72,7 +72,11 @@ export default class Main extends Component {
         <MediaQuery minWidth={750}>
           {matches => {
             return matches ?
-              <EarthSection neos={this.state.neos} selectNeo={this.selectNeo}/>
+              <EarthSection
+                neos={this.state.neos}
+                selectNeo={this.selectNeo}
+                setAboutOpen={this.props.setAboutOpen}
+              />
               :
               <EarthSectionResponsive
                 setOpen={this.setDrawerOpen}
@@ -80,6 +84,7 @@ export default class Main extends Component {
                 detail={this.state.detail}
                 neo={this.state.neo}
                 selectNeo={this.selectNeo}
+                setAboutOpen={this.props.setAboutOpen}
               />
           }}
         </MediaQuery>
@@ -87,3 +92,7 @@ export default class Main extends Component {
     );
   }
 }
+
+Main.propTypes = {
+  setAboutOpen: React.PropTypes.func.isRequired,
+};
