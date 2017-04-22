@@ -20,10 +20,10 @@ const titleStyle = {
 
 const listContainerStyle = {
   width: '100%',
-  minHeight: 'calc(100% - 60px)',
+  minHeight: 'calc(100% - 58px)',
   display: 'flex',
   position: 'absolute',
-  top: 55,
+  top: 58,
   flexWrap: 'wrap',
   justifyContent: 'space-around',
   willChange: 'transform',
