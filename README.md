@@ -9,4 +9,4 @@ more than just a demo in the future.
 
 A special thanks to NASA for collaborating with the open source community.
 
-Feel free to look through the code, download it or visit the [live site](https://murmuring-fjord-10476.herokuapp.com/).
+Feel free to look through the code, download it or visit the [live site](https://neo.litebyte.us).
