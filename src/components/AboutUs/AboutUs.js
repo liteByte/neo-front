@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Dialog from "material-ui/Dialog";
 import Divider from "material-ui/Divider";
 import IconButton from "material-ui/IconButton";
+import IconClose from "material-ui/svg-icons/navigation/close";
 import WebIcon from "./WebIcon";
 import GithubIcon from "./GithubIcon";
 
@@ -18,7 +19,12 @@ const titleStyle = {
 
 const bodyStyle = {
   ...style,
-  position: 'relative',
+};
+
+const closeStyle = {
+  position: 'absolute',
+  top: 0,
+  right: 0,
 };
 
 const dividerStyle = {
@@ -65,6 +71,7 @@ export default class AboutUs extends Component {
         titleStyle={titleStyle}
         actionsContainerStyle={style}
       >
+        <IconButton style={closeStyle} onClick={() => this.props.setOpen(false)}><IconClose/></IconButton>
         <Divider style={dividerStyle}/>
         <div style={containerStyle}>
           <img src="/assets/tierra_sinnubes.svg" alt="Where we are" style={earthStyle} height={150}/>
