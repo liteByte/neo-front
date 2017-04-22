@@ -4,19 +4,21 @@ import Neo from "./Neo";
 
 const cellSize = 100;
 
-const styles = {
-  gridList: {
-    width: '100%',
-    height: '100%',
-    overflowY: 'auto',
-    overflowX: 'hidden',
-  },
-};
-
 export default class List extends Component {
+
+  getStyle = () => {
+    return {
+      width: '100%',
+      height: '100%',
+      maxHeight: this.props.maxHeight,
+      overflowY: 'auto',
+      overflowX: 'hidden',
+    }
+  };
+
   render() {
     return (
-      <GridList cellHeight={cellSize} cols={0} style={styles.gridList}>
+      <GridList cellHeight={cellSize} cols={0} style={this.getStyle()}>
         {this.props.neos.map((neo, index) => (
           <GridTile key={index}>
             <Neo data={neo} cellSize={cellSize} selectNeo={this.props.selectNeo}/>
@@ -30,4 +32,5 @@ export default class List extends Component {
 List.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   selectNeo: React.PropTypes.func.isRequired,
+  maxHeight: React.PropTypes.number,
 };
