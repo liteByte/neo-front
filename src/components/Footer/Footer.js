@@ -16,11 +16,16 @@ const footerStyle = {
   willChange: 'transform',
 };
 
+const aStyle = {
+  textDecoration: 'none',
+  color: 'inherit',
+};
+
 export default class Footer extends Component {
   render() {
     return (
       <footer style={footerStyle}>
-        developed by liteByte and powered by NASA's API
+        developed by liteByte and powered by <a href="https://api.nasa.gov/api.html" style={aStyle}>NASA's API</a>
       </footer>
     );
   }
