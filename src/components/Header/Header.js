@@ -12,6 +12,7 @@ const DateTimeFormat = global.Intl.DateTimeFormat;
 const headerStyle = {
   width: '100%',
   height: 50,
+  minWidth: 300,
   display: 'flex',
   position: 'fixed',
   top: 0,
@@ -37,9 +38,24 @@ const divRightStyle = {
   flex: 1,
 };
 
+const imgContainerStyle = {
+  height: '100%',
+  display: 'block',
+  textDecoration: 'none',
+};
+
 const imgStyle = {
   height: '100%',
-  margin: '0 25px',
+  padding: '0 25px',
+  boxSizing: 'border-box',
+  cursor: 'pointer',
+  verticalAlign: 'top',
+};
+
+const imgSmallStyle = {
+  height: '100%',
+  padding: '0 12px',
+  boxSizing: 'border-box',
   cursor: 'pointer',
   verticalAlign: 'top',
 };
@@ -91,11 +107,18 @@ export default class Header extends Component {
   render() {
     return (
       <header style={headerStyle}>
-        <div style={divLeftStyle}>
-          <a href="http://litebyte.us" target="_blank" style={aStyle}>
+
+        <MediaQuery minWidth={750} component="div" style={divLeftStyle}>
+          <a href="http://litebyte.us" target="_blank" style={imgContainerStyle}>
             <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
           </a>
-        </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={749} component="div" style={divLeftStyle}>
+          <a href="http://litebyte.us" target="_blank" style={imgContainerStyle}>
+            <img alt="logo" src="/assets/header_logo_small.svg" style={imgSmallStyle}/>
+          </a>
+        </MediaQuery>
+
         <div style={divCenterStyle}>
           <DatePicker
             hintText="Landscape Dialog"
@@ -112,11 +135,13 @@ export default class Header extends Component {
                 year: 'numeric',
               }).format
             }
+            textFieldStyle={{width: '100%', maxWidth: 256, minWidth: 180}}
             inputStyle={{textAlign: 'center'}}
           />
         </div>
-        <div style={divRightStyle}>
-          <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
+
+        <MediaQuery minWidth={750} component="div" style={divRightStyle}>
+          <div style={buttonContainerStyle}>
             <div style={buttonStyle}>
               <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.setAboutOpen(true)}/>
             </div>
@@ -124,17 +149,20 @@ export default class Header extends Component {
               <a href="https://github.com/liteByte/neo-front" target="_blank">
                 <FlatButton label="Repository" style={{height: "100%"}}/>
               </a>
-            </div>
-          </MediaQuery>
-          <MediaQuery maxWidth={599} component="div" style={menuButtonStyle}>
+          </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={749} component="div" style={divRightStyle}>
+          <div style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
               <MenuItem primaryText="About Us" onClick={() => this.props.setAboutOpen(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
             </Popover>
-          </MediaQuery>
-        </div>
+          </div>
+        </MediaQuery>
+
       </header>
     );
   }
