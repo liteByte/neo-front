@@ -1,4 +1,4 @@
-const baseUrl = 'https://still-stream-48323.herokuapp.com';
+const baseUrl = process.env.REACT_APP_BACKEND_API;
 
 class NeoService {
 

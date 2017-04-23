@@ -1,11 +1,19 @@
 {
   "name": "neo-front",
   "description": "Neo frontend application",
+  "repository": "https://github.com/liteByte/neo-front",
   "scripts": {
   },
   "env": {
+    "REACT_APP_BACKEND_API": {
+      "required": true
+    }
   },
   "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   },
   "addons": [
 
