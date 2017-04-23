@@ -46,7 +46,7 @@ export default class EarthSectionResponsive extends Component {
               <IconButton style={iconStyle} onClick={() => this.props.setOpen(true)}>
                 <IconChevronRight/>
               </IconButton>
-              <Space neos={this.props.neos} selectNeo={this.props.selectNeo} setAboutOpen={this.props.setAboutOpen}/>
+              <Space neos={this.props.neos} selectNeo={this.props.selectNeo} handleAbout={this.props.handleAbout}/>
             </div>
           }
         </CSSTransitionGroup>
@@ -61,5 +61,5 @@ EarthSectionResponsive.propTypes = {
   neo: React.PropTypes.object,
   selectNeo: React.PropTypes.func.isRequired,
   detail: React.PropTypes.bool.isRequired,
-  setAboutOpen: React.PropTypes.func.isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };

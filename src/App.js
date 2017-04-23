@@ -44,7 +44,7 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  setAboutOpen = (open) => {
+  handleAbout = (open) => {
     this.setState({
       aboutUs: open
     });
@@ -54,9 +54,9 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
         <div style={{height: "100vh", minWidth: 300}}>
-          <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
-          <Header date={this.state.date} handleDate={this.handleDate} setAboutOpen={this.setAboutOpen}/>
-          <Main neos={this.state.neos} setAboutOpen={this.setAboutOpen}/>
+          <AboutUs open={this.state.aboutUs} setOpen={this.handleAbout}/>
+          <Header date={this.state.date} handleDate={this.handleDate} handleAbout={this.handleAbout}/>
+          <Main neos={this.state.neos} handleAbout={this.handleAbout}/>
           <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
           <Disclaimer/>
         </div>

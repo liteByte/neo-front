@@ -137,7 +137,7 @@ export default class Header extends Component {
         <MediaQuery minWidth={750} component="div" style={divRightStyle}>
           <div style={buttonContainerStyle}>
             <div style={buttonStyle}>
-              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.setAboutOpen(true)}/>
+              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.handleAbout(true)}/>
             </div>
             <div style={buttonStyle}>
               <a href="https://github.com/liteByte/neo-front" target="_blank">
@@ -149,7 +149,7 @@ export default class Header extends Component {
         <MediaQuery maxWidth={749} component="div" style={divRightStyle}>
           <div style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
-              <MenuItem primaryText="About Us" onClick={() => this.props.setAboutOpen(true)}/>
+              <MenuItem primaryText="About Us" onClick={() => this.props.handleAbout(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
@@ -165,5 +165,5 @@ export default class Header extends Component {
 Header.propTypes = {
   date: React.PropTypes.object.isRequired,
   handleDate: React.PropTypes.func.isRequired,
-  setAboutOpen: React.PropTypes.func.isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };

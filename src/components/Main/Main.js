@@ -67,7 +67,7 @@ export default class Main extends Component {
               <EarthSection
                 neos={this.props.neos}
                 selectNeo={this.selectNeo}
-                setAboutOpen={this.props.setAboutOpen}
+                handleAbout={this.props.handleAbout}
               />
               :
               <EarthSectionResponsive
@@ -76,7 +76,7 @@ export default class Main extends Component {
                 detail={this.state.detail}
                 neo={this.state.neo}
                 selectNeo={this.selectNeo}
-                setAboutOpen={this.props.setAboutOpen}
+                handleAbout={this.props.handleAbout}
               />
           }}
         </MediaQuery>
@@ -87,5 +87,5 @@ export default class Main extends Component {
 
 Main.propTypes = {
   neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-  setAboutOpen: React.PropTypes.func.isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };
