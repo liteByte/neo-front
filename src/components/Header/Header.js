@@ -122,7 +122,6 @@ export default class Header extends Component {
         <div style={divCenterStyle}>
           <DatePicker
             hintText="Landscape Dialog"
-            mode="landscape"
             value={this.state.date}
             onChange={this.handleDate}
             autoOk={true}
