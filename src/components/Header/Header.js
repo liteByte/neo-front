@@ -4,11 +4,15 @@ import FlatButton from "material-ui/FlatButton";
 import MenuItem from "material-ui/MenuItem";
 import IconMoreVert from "material-ui/svg-icons/navigation/more-vert";
 import IconButton from "material-ui/IconButton";
+import DatePicker from "material-ui/DatePicker";
 import Popover from "../Popover";
+
+const DateTimeFormat = global.Intl.DateTimeFormat;
 
 const headerStyle = {
   width: '100%',
   height: 50,
+  display: 'flex',
   position: 'fixed',
   top: 0,
   zIndex: 1400,
@@ -17,20 +21,25 @@ const headerStyle = {
 };
 
 const divLeftStyle = {
-  width: '50%',
   height: '100%',
-  float: 'left',
+  flex: 1,
+};
+
+const divCenterStyle = {
+  height: '100%',
+  flex: 1,
+  textAlign: 'center',
+  color: 'white',
 };
 
 const divRightStyle = {
-  width: '50%',
   height: '100%',
-  float: 'left',
+  flex: 1,
 };
 
 const imgStyle = {
   height: '100%',
-  marginLeft: 25,
+  margin: '0 25px',
   cursor: 'pointer',
   verticalAlign: 'top',
 };
@@ -57,6 +66,28 @@ const aStyle = {
 };
 
 export default class Header extends Component {
+
+  constructor(props) {
+    super(props);
+
+    const minDate = new Date();
+    const maxDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 3);
+    minDate.setHours(0, 0, 0, 0);
+    maxDate.setFullYear(maxDate.getFullYear() + 3);
+    maxDate.setHours(0, 0, 0, 0);
+
+    this.state = {
+      minDate: minDate,
+      maxDate: maxDate,
+      date: new Date(),
+    };
+  }
+
+  handleDate = (e, date) => {
+    this.setState({date})
+  };
+
   render() {
     return (
       <header style={headerStyle}>
@@ -64,6 +95,25 @@ export default class Header extends Component {
           <a href="http://litebyte.us" target="_blank" style={aStyle}>
             <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
           </a>
+        </div>
+        <div style={divCenterStyle}>
+          <DatePicker
+            hintText="Landscape Dialog"
+            mode="landscape"
+            value={this.state.date}
+            onChange={this.handleDate}
+            autoOk={true}
+            minDate={this.state.minDate}
+            maxDate={this.state.maxDate}
+            formatDate={
+              new DateTimeFormat('en-US', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              }).format
+            }
+            inputStyle={{textAlign: 'center'}}
+          />
         </div>
         <div style={divRightStyle}>
           <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
