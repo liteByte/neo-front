@@ -4,11 +4,16 @@ import FlatButton from "material-ui/FlatButton";
 import MenuItem from "material-ui/MenuItem";
 import IconMoreVert from "material-ui/svg-icons/navigation/more-vert";
 import IconButton from "material-ui/IconButton";
+import DatePicker from "material-ui/DatePicker";
 import Popover from "../Popover";
+
+const DateTimeFormat = global.Intl.DateTimeFormat;
 
 const headerStyle = {
   width: '100%',
   height: 50,
+  minWidth: 300,
+  display: 'flex',
   position: 'fixed',
   top: 0,
   zIndex: 1400,
@@ -17,20 +22,40 @@ const headerStyle = {
 };
 
 const divLeftStyle = {
-  width: '50%',
   height: '100%',
-  float: 'left',
+  flex: 1,
+};
+
+const divCenterStyle = {
+  height: '100%',
+  flex: 1,
+  textAlign: 'center',
+  color: 'white',
 };
 
 const divRightStyle = {
-  width: '50%',
   height: '100%',
-  float: 'left',
+  flex: 1,
+};
+
+const imgContainerStyle = {
+  height: '100%',
+  display: 'block',
+  textDecoration: 'none',
 };
 
 const imgStyle = {
   height: '100%',
-  marginLeft: 25,
+  padding: '0 25px',
+  boxSizing: 'border-box',
+  cursor: 'pointer',
+  verticalAlign: 'top',
+};
+
+const imgSmallStyle = {
+  height: '100%',
+  padding: '0 12px',
+  boxSizing: 'border-box',
   cursor: 'pointer',
   verticalAlign: 'top',
 };
@@ -57,39 +82,88 @@ const aStyle = {
 };
 
 export default class Header extends Component {
+
+  constructor(props) {
+    super(props);
+
+    const minDate = new Date();
+    const maxDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 3);
+    minDate.setHours(0, 0, 0, 0);
+    maxDate.setFullYear(maxDate.getFullYear() + 3);
+    maxDate.setHours(0, 0, 0, 0);
+
+    this.state = {
+      minDate: minDate,
+      maxDate: maxDate,
+    };
+  }
+
   render() {
     return (
       <header style={headerStyle}>
-        <div style={divLeftStyle}>
-          <a href="http://litebyte.us" target="_blank" style={aStyle}>
+
+        <MediaQuery minWidth={750} component="div" style={divLeftStyle}>
+          <a href="http://litebyte.us" target="_blank" style={imgContainerStyle}>
             <img alt="logo" src="/assets/header_logo.svg" style={imgStyle}/>
           </a>
+        </MediaQuery>
+        <MediaQuery maxWidth={749} component="div" style={divLeftStyle}>
+          <a href="http://litebyte.us" target="_blank" style={imgContainerStyle}>
+            <img alt="logo" src="/assets/header_logo_small.svg" style={imgSmallStyle}/>
+          </a>
+        </MediaQuery>
+
+        <div style={divCenterStyle}>
+          <DatePicker
+            hintText="Landscape Dialog"
+            value={this.props.date}
+            onChange={this.props.handleDate}
+            autoOk={true}
+            minDate={this.state.minDate}
+            maxDate={this.state.maxDate}
+            formatDate={
+              new DateTimeFormat('en-US', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              }).format
+            }
+            textFieldStyle={{width: '100%', maxWidth: 256, minWidth: 180}}
+            inputStyle={{textAlign: 'center'}}
+          />
         </div>
-        <div style={divRightStyle}>
-          <MediaQuery minWidth={600} component="div" style={buttonContainerStyle}>
+
+        <MediaQuery minWidth={750} component="div" style={divRightStyle}>
+          <div style={buttonContainerStyle}>
             <div style={buttonStyle}>
-              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.setAboutOpen(true)}/>
+              <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.handleAbout(true)}/>
             </div>
             <div style={buttonStyle}>
               <a href="https://github.com/liteByte/neo-front" target="_blank">
                 <FlatButton label="Repository" style={{height: "100%"}}/>
               </a>
-            </div>
-          </MediaQuery>
-          <MediaQuery maxWidth={599} component="div" style={menuButtonStyle}>
+          </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={749} component="div" style={divRightStyle}>
+          <div style={menuButtonStyle}>
             <Popover component={<IconButton><IconMoreVert/></IconButton>}>
-              <MenuItem primaryText="About Us" onClick={() => this.props.setAboutOpen(true)}/>
+              <MenuItem primaryText="About Us" onClick={() => this.props.handleAbout(true)}/>
               <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
                 <MenuItem primaryText="Repository"/>
               </a>
             </Popover>
-          </MediaQuery>
-        </div>
+          </div>
+        </MediaQuery>
+
       </header>
     );
   }
 }
 
 Header.propTypes = {
-  setAboutOpen: React.PropTypes.func.isRequired,
+  date: React.PropTypes.object.isRequired,
+  handleDate: React.PropTypes.func.isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };

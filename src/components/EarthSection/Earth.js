@@ -44,7 +44,7 @@ export default class Earth extends Component {
           <IconButton
             style={buttonStyle}
             iconStyle={this.getIconStyle(dimensions)}
-            onClick={() => this.props.setAboutOpen(true)}
+            onClick={() => this.props.handleAbout(true)}
           >
             <img src="/assets/tierra_nubes.svg" alt="Earth"/>
           </IconButton>
@@ -55,5 +55,5 @@ export default class Earth extends Component {
 }
 
 Earth.propTypes = {
-  setAboutOpen: React.PropTypes.func.isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };

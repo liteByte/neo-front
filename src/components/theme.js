@@ -2,9 +2,11 @@ import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 
 const palette = {
   ...darkBaseTheme.palette,
-  primary1Color: '#0a0a0a',
-  primary2Color: '#0a0a0a',
-  canvasColor: 'rgba(10, 10, 10, .65)',
+  primary1Color: '#fff',
+  primary2Color: '#122b3a',
+  canvasColor: 'rgba(35, 35, 35, .65)',
+  textColor: '#fff',
+  alternateTextColor: '#fff',
 };
 
 export default {

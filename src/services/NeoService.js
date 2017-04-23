@@ -5,10 +5,7 @@ class NeoService {
   static instance = null;
 
   neos = null;
-
-  constructor() {
-    this.fetchNeos();
-  }
+  lastDate = null;
 
   static getInstance() {
     if (NeoService.instance === null)
@@ -16,8 +13,12 @@ class NeoService {
     return NeoService.instance;
   }
 
-  fetchNeos() {
-    return fetch(baseUrl + '/neo/feed')
+  fetchNeos(date) {
+
+    const iso = date.toISOString().substr(0, 10);
+    this.lastDate = iso;
+
+    return fetch(`${baseUrl}/neo/feed?start_date=${iso}&end_date=${iso}`)
       .then(response => {
         if (!response.ok)
           throw new Error("Something went wrong");
@@ -81,9 +82,9 @@ class NeoService {
     });
   }
 
-  getNeos() {
-    if (this.neos === null)
-      return this.fetchNeos().catch(err => { throw err; });
+  getNeos(date) {
+    if (this.lastDate !== date.toISOString().substr(0, 10))
+      return this.fetchNeos(date).catch(err => { throw err; });
     else
       return Promise.resolve(this.neos);
   }
