@@ -1,10 +1,15 @@
 import React, {Component} from "react";
+import MediaQuery from "react-responsive";
 import DatePicker from "material-ui/DatePicker";
+import IconButton from "material-ui/IconButton";
+import IconLeft from "material-ui/svg-icons/navigation/chevron-left";
+import IconRight from "material-ui/svg-icons/navigation/chevron-right";
 
 const DateTimeFormat = global.Intl.DateTimeFormat;
 
 const divCenterStyle = {
   height: '100%',
+  display: 'flex',
   flex: 1,
   textAlign: 'center',
   color: 'white',
@@ -38,9 +43,25 @@ export default class Center extends Component {
     };
   }
 
+  handleNext = () => {
+    this.props.handleDate(null, this.addDays(1));
+  };
+
+  handlePrev = () => {
+    this.props.handleDate(null, this.addDays(-1));
+  };
+
+  addDays(days) {
+    const date = new Date(this.props.date);
+    return new Date(date.setTime(date.getTime() + days * 86400000));
+  }
+
   render() {
     return (
       <div style={divCenterStyle}>
+        <MediaQuery minWidth={450}>
+          <IconButton onClick={this.handlePrev}><IconLeft/></IconButton>
+        </MediaQuery>
         <DatePicker
           hintText="Landscape Dialog"
           value={this.props.date}
@@ -58,6 +79,9 @@ export default class Center extends Component {
           textFieldStyle={textFieldStyle}
           inputStyle={inputStyle}
         />
+        <MediaQuery minWidth={450}>
+          <IconButton onClick={this.handleNext}><IconRight/></IconButton>
+        </MediaQuery>
       </div>
     );
   }

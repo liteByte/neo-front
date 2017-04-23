@@ -36,7 +36,7 @@ export default class Right extends Component {
   render() {
     return (
       <div style={divRightStyle}>
-        <MediaQuery minWidth={750} component="div" style={buttonContainerStyle}>
+        <MediaQuery minWidth={850} component="div" style={buttonContainerStyle}>
           <div style={buttonStyle}>
             <FlatButton label="About Us" style={{height: "100%"}} onClick={() => this.props.handleAbout(true)}/>
           </div>
@@ -46,7 +46,7 @@ export default class Right extends Component {
             </a>
           </div>
         </MediaQuery>
-        <MediaQuery maxWidth={749} component="div" style={menuButtonStyle}>
+        <MediaQuery maxWidth={849} component="div" style={menuButtonStyle}>
           <Popover component={<IconButton><IconMoreVert/></IconButton>}>
             <MenuItem primaryText="About Us" onClick={() => this.props.handleAbout(true)}/>
             <a href="https://github.com/liteByte/neo-front" target="_blank" style={aStyle}>
