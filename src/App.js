@@ -4,6 +4,7 @@ import MediaQuery from "react-responsive";
 import theme from "./components/theme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
+import NeoServices from "./services/NeoService";
 import Disclaimer from "./components/Disclaimer";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Header from "./components/Header/Header";
@@ -20,8 +21,27 @@ class App extends Component {
     super(props);
 
     this.state = {
+      neos: [],
+      date: new Date(),
       aboutUs: false,
+    };
+
+    this.getNeos(this.state.date);
+  }
+
+  handleDate = (e, date) => {
+    if (date.toISOString().substr(0, 10) !== this.state.date.toISOString().substr(0, 10)) {
+      this.setState({date});
+      this.getNeos(date);
     }
+  };
+
+  getNeos(date) {
+    NeoServices.getNeos(date)
+      .then(neos => {
+        this.setState({neos});
+      })
+      .catch(err => console.log(err));
   }
 
   setAboutOpen = (open) => {
@@ -35,8 +55,8 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
         <div style={{height: "100vh", minWidth: 300}}>
           <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
-          <Header setAboutOpen={this.setAboutOpen}/>
-          <Main setAboutOpen={this.setAboutOpen}/>
+          <Header date={this.state.date} handleDate={this.handleDate} setAboutOpen={this.setAboutOpen}/>
+          <Main neos={this.state.neos} setAboutOpen={this.setAboutOpen}/>
           <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
           <Disclaimer/>
         </div>

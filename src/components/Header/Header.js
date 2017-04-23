@@ -96,13 +96,8 @@ export default class Header extends Component {
     this.state = {
       minDate: minDate,
       maxDate: maxDate,
-      date: new Date(),
     };
   }
-
-  handleDate = (e, date) => {
-    this.setState({date})
-  };
 
   render() {
     return (
@@ -122,8 +117,8 @@ export default class Header extends Component {
         <div style={divCenterStyle}>
           <DatePicker
             hintText="Landscape Dialog"
-            value={this.state.date}
-            onChange={this.handleDate}
+            value={this.props.date}
+            onChange={this.props.handleDate}
             autoOk={true}
             minDate={this.state.minDate}
             maxDate={this.state.maxDate}
@@ -168,5 +163,7 @@ export default class Header extends Component {
 }
 
 Header.propTypes = {
+  date: React.PropTypes.object.isRequired,
+  handleDate: React.PropTypes.func.isRequired,
   setAboutOpen: React.PropTypes.func.isRequired,
 };
