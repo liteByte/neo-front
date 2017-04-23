@@ -7,7 +7,6 @@ class NeoService {
   constructor() {
 
     this.neos = null;
-    this.lastDate = null;
 
   }
 
@@ -19,8 +18,6 @@ class NeoService {
 
   fetchNeos(date) {
     const iso = date.toISOString().substr(0, 10);
-    this.lastDate = iso;
-
     return fetch(`${baseUrl}/neo/feed?start_date=${iso}&end_date=${iso}`)
       .then(response => {
         if (!response.ok)
@@ -79,26 +76,21 @@ class NeoService {
   }
 
   getNeos(date) {
-    if (this.lastDate !== date.toISOString().substr(0, 10)) {
+    return this.getDate(date)
+      .then(neos => {
+        if (!neos) return this.fetchNeos(date).catch(err => { throw err; });
+        return Promise.resolve(neos);
+      })
+      .then(neos => {
+        this.neos = this.processNeos(neos);
 
-      return this.getDate(date)
-        .then(neos => {
-          if (!neos) return this.fetchNeos(date).catch(err => { throw err; });
-          return Promise.resolve(neos);
-        })
-        .then(neos => {
-          this.neos = this.processNeos(neos);
+        setTimeout(() => {
+          window.firstLoad = false;
+        }, 500);
 
-          setTimeout(() => {
-            window.firstLoad = false;
-          }, 500);
-
-          return this.neos;
-        })
-        .catch(err => { throw err; });
-    } else {
-      return Promise.resolve(this.neos);
-    }
+        return this.neos;
+      })
+      .catch(err => { throw err; });
   }
 
   getDate(date) {
