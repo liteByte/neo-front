@@ -102,14 +102,17 @@ class NeoService {
   }
 
   getDate(date) {
+    if (this.checkLocalStorage() === false) return null;
+
     const dateKey = 'neos-' + date.toISOString().substr(0, 10);
     return new Promise(resolve => {
       for (let key in localStorage) {
         if (localStorage.hasOwnProperty(key)) {
           if (key === dateKey) {
+
             try {
               resolve(JSON.parse(localStorage.getItem(dateKey)));
-            } catch(e) {
+            } catch (e) {
               return resolve(null);
             }
           }
@@ -121,6 +124,17 @@ class NeoService {
 
   saveNeos(date, neos) {
     localStorage.setItem('neos-' + date, JSON.stringify(neos));
+  }
+
+  checkLocalStorage() {
+    const test = 'test';
+    try {
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 
 }
