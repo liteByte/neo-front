@@ -10,8 +10,8 @@ const DateTimeFormat = global.Intl.DateTimeFormat;
 const divCenterStyle = {
   height: '100%',
   display: 'flex',
+  justifyContent: 'center',
   flex: 1,
-  textAlign: 'center',
   color: 'white',
 };
 
