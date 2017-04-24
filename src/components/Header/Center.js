@@ -44,23 +44,25 @@ export default class Center extends Component {
   }
 
   handleNext = () => {
-    this.props.handleDate(null, this.addDays(1));
+    this.props.handleDate(null, this.addDays(this.props.date, 1));
   };
 
   handlePrev = () => {
-    this.props.handleDate(null, this.addDays(-1));
+    this.props.handleDate(null, this.addDays(this.props.date, -1));
   };
 
-  addDays(days) {
-    const date = new Date(this.props.date);
+  addDays(date, days) {
+    date = new Date(date);
     return new Date(date.setTime(date.getTime() + days * 86400000));
   }
 
   render() {
+    const nextButton = this.addDays(this.props.date, 1) <= this.state.maxDate;
+    const prevButton = this.addDays(this.props.date, -1) >= this.state.minDate;
     return (
       <div style={divCenterStyle}>
         <MediaQuery minWidth={450}>
-          <IconButton onClick={this.handlePrev}><IconLeft/></IconButton>
+          <IconButton onClick={this.handlePrev} disabled={!prevButton}><IconLeft/></IconButton>
         </MediaQuery>
         <DatePicker
           hintText="Landscape Dialog"
@@ -80,7 +82,7 @@ export default class Center extends Component {
           inputStyle={inputStyle}
         />
         <MediaQuery minWidth={450}>
-          <IconButton onClick={this.handleNext}><IconRight/></IconButton>
+          <IconButton onClick={this.handleNext} disabled={!nextButton}><IconRight/></IconButton>
         </MediaQuery>
       </div>
     );
