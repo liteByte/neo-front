@@ -4,7 +4,6 @@ import ListSection from "../ListSection/ListSection";
 import ListSectionResponsive from "../ListSection/ListSectionResponsive";
 import EarthSection from "../EarthSection/EarthSection";
 import EarthSectionResponsive from "../EarthSection/EarthSectionResponsive";
-import NeoServices from "../../services/NeoService";
 
 const style = {
   height: '100%',
@@ -22,15 +21,8 @@ export default class Main extends Component {
     this.state = {
       drawer: false,
       neo: null,
-      neos: [],
       detail: false,
     };
-
-    NeoServices.getNeos()
-      .then(neos => {
-        this.setState({neos});
-      })
-      .catch(err => console.log(err));
   }
 
   setDrawerOpen = (open) => {
@@ -55,14 +47,14 @@ export default class Main extends Component {
           {matches => {
             return matches ?
               <ListSection
-                neos={this.state.neos}
+                neos={this.props.neos}
                 detail={this.state.detail}
                 neo={this.state.neo}
                 selectNeo={this.selectNeo}
               />
               :
               <ListSectionResponsive
-                neos={this.state.neos}
+                neos={this.props.neos}
                 open={this.state.drawer}
                 setOpen={this.setDrawerOpen}
                 selectNeo={this.selectNeo}
@@ -73,18 +65,18 @@ export default class Main extends Component {
           {matches => {
             return matches ?
               <EarthSection
-                neos={this.state.neos}
+                neos={this.props.neos}
                 selectNeo={this.selectNeo}
-                setAboutOpen={this.props.setAboutOpen}
+                handleAbout={this.props.handleAbout}
               />
               :
               <EarthSectionResponsive
                 setOpen={this.setDrawerOpen}
-                neos={this.state.neos}
+                neos={this.props.neos}
                 detail={this.state.detail}
                 neo={this.state.neo}
                 selectNeo={this.selectNeo}
-                setAboutOpen={this.props.setAboutOpen}
+                handleAbout={this.props.handleAbout}
               />
           }}
         </MediaQuery>
@@ -94,5 +86,6 @@ export default class Main extends Component {
 }
 
 Main.propTypes = {
-  setAboutOpen: React.PropTypes.func.isRequired,
+  neos: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  handleAbout: React.PropTypes.func.isRequired,
 };

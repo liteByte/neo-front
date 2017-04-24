@@ -25,7 +25,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer style={footerStyle}>
-        developed by liteByte and powered by <a href="https://api.nasa.gov/api.html" style={aStyle}>NASA's API</a>
+        developed by liteByte and powered by <a href="https://api.nasa.gov/api.html" target="_blank" style={aStyle}>NASA's API</a>
       </footer>
     );
   }

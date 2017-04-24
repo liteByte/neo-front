@@ -1,9 +1,12 @@
 import injectTapEventPlugin from "react-tap-event-plugin";
 import React, {Component} from "react";
 import MediaQuery from "react-responsive";
+import LinearProgress from "material-ui/LinearProgress";
+import {Set} from "immutable";
 import theme from "./components/theme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
+import NeoServices from "./services/NeoService";
 import Disclaimer from "./components/Disclaimer";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Header from "./components/Header/Header";
@@ -14,17 +17,52 @@ injectTapEventPlugin();
 
 window.firstLoad = true;
 
+const progressStyle = {
+  position: 'absolute',
+  top: 46,
+  background: '#0a0a0a',
+  zIndex: 1401,
+};
+
 class App extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
+      neos: [],
+      date: new Date(),
       aboutUs: false,
-    }
+      loading: Set(),
+    };
+
+    this.getNeos(this.state.date);
   }
 
-  setAboutOpen = (open) => {
+  handleDate = (e, date) => {
+    if (date.toISOString().substr(0, 10) !== this.state.date.toISOString().substr(0, 10)) {
+      this.setState({date});
+      this.getNeos(date);
+    }
+  };
+
+  getNeos(date) {
+    if (!window.firstLoad)
+      this.setState({
+        loading: this.state.loading.add(date.toISOString().substr(0, 10))
+      });
+    NeoServices.getNeos(date)
+      .then(neos => {
+        const state = {
+          loading: this.state.loading.remove(date.toISOString().substr(0, 10)),
+        };
+        if (this.state.date === date) state.neos = neos;
+        this.setState(state);
+      })
+      .catch(err => console.log(err));
+  }
+
+  handleAbout = (open) => {
     this.setState({
       aboutUs: open
     });
@@ -34,9 +72,10 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
         <div style={{height: "100vh", minWidth: 300}}>
-          <AboutUs open={this.state.aboutUs} setOpen={this.setAboutOpen}/>
-          <Header setAboutOpen={this.setAboutOpen}/>
-          <Main setAboutOpen={this.setAboutOpen}/>
+          <AboutUs open={this.state.aboutUs} setOpen={this.handleAbout}/>
+          { this.state.loading.size > 0 ? <LinearProgress style={progressStyle} color="#122b3a"/> : null}
+          <Header date={this.state.date} handleDate={this.handleDate} handleAbout={this.handleAbout}/>
+          <Main neos={this.state.neos} handleAbout={this.handleAbout}/>
           <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
           <Disclaimer/>
         </div>
