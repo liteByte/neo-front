@@ -60,12 +60,14 @@ class NeoService {
       let distance = farthest > 0 ? neo.missDistance / farthest : 1;
       if (distance < minDisplayDistance) distance = minDisplayDistance;
 
+      const hash = hashNeo(neo.name);
       neo.display = {
+        hash: hash,
         size: size,
         distance: distance,
-        angle: Math.random() * 360,
-        color: Math.round(Math.random() * 3),
-        terrain: Math.round(Math.random() * 5),
+        angle: Math.abs(hash % 360),
+        color: Math.abs(hash % 4),
+        terrain: Math.abs(hash % 6),
       };
     }
 
@@ -73,6 +75,17 @@ class NeoService {
       if (a.size.avg === b.size.avg) return 0;
       return a.size.avg > b.size.avg ? -1 : 1;
     });
+
+    function hashNeo(name) {
+      let hash = 0, i, chr;
+      if (name.length === 0) return hash;
+      for (i = 0; i < name.length; i++) {
+        chr = name.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0;
+      }
+      return hash;
+    }
   }
 
   getNeos(date) {
