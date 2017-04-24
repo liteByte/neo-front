@@ -53,10 +53,11 @@ class App extends Component {
       });
     NeoServices.getNeos(date)
       .then(neos => {
-        this.setState({
-          neos: neos,
+        const state = {
           loading: this.state.loading.remove(date.toISOString().substr(0, 10)),
-        });
+        };
+        if (this.state.date === date) state.neos = neos;
+        this.setState(state);
       })
       .catch(err => console.log(err));
   }
