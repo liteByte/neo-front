@@ -50,21 +50,21 @@ export default class Intro extends Component {
               onStart={this.handleClose}
             >
               <Slide
-                media={<img src="/assets/tierra_sinnubes.svg" style={imgStyle}/>}
+                media={<img src="/assets/tierra_sinnubes.svg" style={imgStyle} alt="Earth"/>}
                 mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
                 contentStyle={{backgroundColor: "#17415a"}}
                 title="Discover NEOs"
                 subtitle="NEOs are small Solar System bodies whose orbit brings them close to the Earth."
               />
               <Slide
-                media={<img src="/assets/neo_example_1.svg" style={imgStyle}/>}
+                media={<img src="/assets/neo_example_1.svg" style={imgStyle} alt="NEO"/>}
                 mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
                 contentStyle={{backgroundColor: "#17415a"}}
                 title=""
                 subtitle="Some cause mass extinctions, others grant wishes."
               />
               <Slide
-                media={<img src="/assets/neo_example_2.svg" style={imgStyle}/>}
+                media={<img src="/assets/neo_example_2.svg" style={imgStyle} alt="NEO"/>}
                 mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
                 contentStyle={{backgroundColor: "#17415a"}}
                 title=""
