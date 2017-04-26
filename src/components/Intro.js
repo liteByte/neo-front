@@ -14,8 +14,10 @@ export default class Intro extends Component {
     super(props);
 
     this.state = {
-      open: true,
-    }
+      open: !sessionStorage.getItem("intro"),
+    };
+
+    sessionStorage.setItem("intro", true);
   }
 
   handleClose = () => {
