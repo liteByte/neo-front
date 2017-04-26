@@ -2,7 +2,11 @@ import React, {Component} from "react";
 import Measure from "react-measure";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {AutoRotatingCarousel, Slide} from "material-auto-rotating-carousel";
-import {blue400, blue600, red400, red600} from "material-ui/styles/colors";
+
+const imgStyle = {
+  maxHeight: '100%',
+  maxWidth: '100%',
+};
 
 export default class Intro extends Component {
 
@@ -21,7 +25,7 @@ export default class Intro extends Component {
   };
 
   isMobile = (dimensions) => {
-    return dimensions.width < 750 || dimensions.height < 750;
+    return dimensions.width < 750 || dimensions.height < 500;
   };
 
   isLandscape = (dimensions) => {
@@ -35,7 +39,7 @@ export default class Intro extends Component {
           { dimensions =>
             <AutoRotatingCarousel
               autoplay={true}
-              interval={60000}
+              interval={120000}
               mobile={this.isMobile(dimensions)}
               landscape={this.isLandscape(dimensions)}
               label="Get started"
@@ -44,18 +48,25 @@ export default class Intro extends Component {
               onStart={this.handleClose}
             >
               <Slide
-                media={<img src="http://www.icons101.com/icon_png/size_256/id_79394/youtube.png"/>}
-                mediaBackgroundStyle={{backgroundColor: red400}}
-                contentStyle={{backgroundColor: red600}}
-                title="Welcome to NEO"
-                subtitle={<span>NEOs are small Solar System bodies whose orbit brings them close to the Earth.</span>}
+                media={<img src="/assets/tierra_sinnubes.svg" style={imgStyle}/>}
+                mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
+                contentStyle={{backgroundColor: "#17415a"}}
+                title="Discover NEOs"
+                subtitle="NEOs are small Solar System bodies whose orbit brings them close to the Earth."
               />
               <Slide
-                media={<img src="http://www.icons101.com/icon_png/size_256/id_80975/GoogleInbox.png"/>}
-                mediaBackgroundStyle={{backgroundColor: blue400}}
-                contentStyle={{backgroundColor: blue600}}
-                title={<span/>}
-                subtitle={<span><p>Some cause mass extinctions, others grant wishes.</p><p>Meet our long travelled companions.</p></span>}
+                media={<img src="/assets/neo_example_1.svg" style={imgStyle}/>}
+                mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
+                contentStyle={{backgroundColor: "#17415a"}}
+                title=""
+                subtitle="Some cause mass extinctions, others grant wishes."
+              />
+              <Slide
+                media={<img src="/assets/neo_example_2.svg" style={imgStyle}/>}
+                mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
+                contentStyle={{backgroundColor: "#17415a"}}
+                title=""
+                subtitle="Every day, many come really close, and you can see them all here."
               />
             </AutoRotatingCarousel>
           }
