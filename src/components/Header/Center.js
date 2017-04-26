@@ -32,9 +32,9 @@ export default class Center extends Component {
 
     const minDate = new Date();
     const maxDate = new Date();
-    minDate.setFullYear(minDate.getFullYear() - 3);
+    minDate.setFullYear(minDate.getFullYear() - 10);
     minDate.setHours(0, 0, 0, 0);
-    maxDate.setFullYear(maxDate.getFullYear() + 3);
+    maxDate.setFullYear(maxDate.getFullYear() + 10);
     maxDate.setHours(0, 0, 0, 0);
 
     this.state = {
