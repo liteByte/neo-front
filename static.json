@@ -1,0 +1,10 @@
+{
+  "root": "build/",
+  "https_only": true,
+  "clean_urls": false,
+  "routes": {
+    "/assets/*": "/assets/",
+    "/static/*": "/static/",
+    "/**": "index.html"
+  }
+}
