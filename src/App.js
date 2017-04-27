@@ -7,6 +7,7 @@ import theme from "./components/theme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import NeoServices from "./services/NeoService";
+import Intro from "./components/Intro";
 import Disclaimer from "./components/Disclaimer";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Header from "./components/Header/Header";
@@ -78,6 +79,7 @@ class App extends Component {
           <Main neos={this.state.neos} handleAbout={this.handleAbout}/>
           <MediaQuery component={Footer} minWidth={500} minHeight={400}/>
           <Disclaimer/>
+          <Intro/>
         </div>
       </MuiThemeProvider>
     );
