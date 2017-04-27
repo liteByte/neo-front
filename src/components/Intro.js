@@ -53,7 +53,7 @@ export default class Intro extends Component {
                 media={<img src="/assets/tierra_sinnubes.svg" style={imgStyle} alt="Earth"/>}
                 mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
                 contentStyle={{backgroundColor: "#17415a"}}
-                title="Discover NEOs"
+                title="What are NEOs?"
                 subtitle="NEOs are small Solar System bodies whose orbit brings them close to the Earth."
               />
               <Slide
