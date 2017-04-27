@@ -6,7 +6,7 @@ const disclaimerStyle = {
   right: 10,
   bottom: 13,
   color: '#c7c7c7',
-  zIndex: 3000,
+  zIndex: 1400,
 };
 
 export default class Disclaimer extends Component {

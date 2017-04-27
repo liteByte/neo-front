@@ -4,6 +4,7 @@ import List from "./List";
 
 const containerStyle = {
   willChange: 'transform',
+  background: '#0a0a0a',
 };
 
 const overlayStyle = {
