@@ -46,7 +46,7 @@ export default class Earth extends Component {
             iconStyle={this.getIconStyle(dimensions)}
             onClick={() => this.props.handleAbout(true)}
           >
-            <img src="/assets/tierra_nubes.svg" alt="Earth"/>
+            <img src="/assets/earth/tierra_nubes.svg" alt="Earth"/>
           </IconButton>
         }
       </Measure>
