@@ -40,9 +40,19 @@ const containerStyle = {
   color: 'rgba(255, 255, 255, .9)',
 };
 
+const earthContainerStyle = {
+  martinTop: 15,
+  position: 'relative',
+};
+
 const earthStyle = {
-  marginTop: 15,
   transform: 'translateX(6px)',
+};
+
+const weAreHereStyle = {
+  position: 'absolute',
+  top: '66%',
+  left: 'calc(50% + 100px)',
 };
 
 const spanStyle = {
@@ -74,7 +84,10 @@ export default class AboutUs extends Component {
         <IconButton style={closeStyle} onClick={() => this.props.setOpen(false)}><IconClose/></IconButton>
         <Divider style={dividerStyle}/>
         <div style={containerStyle}>
-          <img src="/assets/tierra_sinnubes.svg" alt="Where we are" style={earthStyle} height={150}/>
+          <div style={earthContainerStyle}>
+            <img src="/assets/earth/earth-with-line.svg" alt="Where we are" style={earthStyle} height={150}/>
+            <div style={weAreHereStyle}>We are here</div>
+          </div>
           <p>We are a small development company located in Buenos Aires, Argentina,
             focused on delivering quality software.</p>
           <p>
