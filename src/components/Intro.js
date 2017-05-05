@@ -50,7 +50,7 @@ export default class Intro extends Component {
               onStart={this.handleClose}
             >
               <Slide
-                media={<img src="/assets/tierra_sinnubes.svg" style={imgStyle} alt="Earth"/>}
+                media={<img src="/assets/earth/tierra_sinnubes.svg" style={imgStyle} alt="Earth"/>}
                 mediaBackgroundStyle={{backgroundColor: "#122b3a"}}
                 contentStyle={{backgroundColor: "#17415a"}}
                 title="What are NEOs?"
